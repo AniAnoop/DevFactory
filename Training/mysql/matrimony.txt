@@ -1,0 +1,26 @@
+create database matrimony;
+
+CREATE TABLE tblLanguage (
+    id INT NOT NULL AUTO_INCREMENT,
+    txtLanguage VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE tblUsers (
+    id INT NOT NULL AUTO_INCREMENT,
+    txtName VARCHAR(50),
+    txtMobileno VARCHAR(50),
+    refLanguage INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (refLanguage)
+        REFERENCES tbllanguage (id)
+);
+
+SELECT id,txtName,txtMobileno,refLanguage FROM matrimony.tblusers;
+select id,txtLanguage from tbllanguage where id>4
+
+INSERT INTO `matrimony`.`tbllanguage` (`txtLanguage`) VALUES ('Test');
+INSERT INTO `matrimony`.`tbllanguage` (`txtLanguage`) VALUES ('new'), ('new2');
+
+UPDATE `matrimony`.`tbllanguage` SET `txtLanguage` = 'newdfs', `nextfield`='value' WHERE (`id` = '5');
+
