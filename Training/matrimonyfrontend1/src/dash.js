@@ -19,54 +19,50 @@ export default function App() {
       <div className="register">
         <div className="register_row1">
           <label className="register_row1_label">
-            Great! You have completed 20%
+            Great! You have completed 
+            <span>20%</span>
           </label>
         </div>
         <div className="register_row2">
-          <div className="register_row3">
-            <div className="register_row3_col1">
-              <img src={gh_icon} width="70" />
-              <label>Trusted by Christians across the world!</label>
-            </div>
-            <div className="register_row3_col2">
-              
-                <label>Please provide us with your basic details</label>
-              
-              <div className="register_row3_col2_row1">
-              <div className="register_row3_col2_row2">
-                <label>Date of birth</label>
-                <input className="register_input1"></input>
-              </div>
-              <div className="register_row3_col2_row2">
-                <label>Denomination</label>
-                <input className="register_input1"></input>
-              </div>
-              <div className="register_row3_col2_row2">
-                <label>Division</label>
-                <input className="register_input1"></input>
-              </div>
-              <div className="register_row3_col2_row2">
-                <label>Subcaste(optional)</label>
-                <input className="register_input1"></input>
-              </div>
-              <div className="register_row3_col2_row2">
-                <label>Mother tongue</label>
-                <input className="register_input1"></input>
-              </div>
-              <div className="register_row3_col2_row2">
-                <label>Email id</label>
-                <input className="register_input1"></input>
-              </div>
-              <div className="register_row3_col2_row2">
-                <label>Password</label>
-                <input className="register_input1"></input>
-              </div>
-
-              <div className="register_row3_col2_button">
-                <button className="register_button">CONTINUE</button>
-              </div>
-            </div>
+          <div className="register_row3_col1">
+            <img src={gh_icon} width="70" />
+            <label>Trusted by Christians across the world!</label>
           </div>
+          <div className="register_row3">
+            <label>Please provide us with your basic details</label>
+
+            <div className="register_row3_col2_row2">
+              <label>Date of birth</label>
+              <input className="register_input1"></input>
+            </div>
+            <div className="register_row3_col2_row2">
+              <label>Denomination</label>
+              <input className="register_input1"></input>
+            </div>
+            <div className="register_row3_col2_row2">
+              <label>Division</label>
+              <input className="register_input1"></input>
+            </div>
+            <div className="register_row3_col2_row2">
+              <label>Subcaste(optional)</label>
+              <input className="register_input1"></input>
+            </div>
+            <div className="register_row3_col2_row2">
+              <label>Mother tongue</label>
+              <input className="register_input1"></input>
+            </div>
+            <div className="register_row3_col2_row2">
+              <label>Email id</label>
+              <input className="register_input1"></input>
+            </div>
+            <div className="register_row3_col2_row2">
+              <label>Password</label>
+              <input className="register_input1"></input>
+            </div>
+
+            <div className="register_row3_col2_button">
+              <button className="register_button">CONTINUE</button>
+            </div>
           </div>
         </div>
 

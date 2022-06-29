@@ -16,11 +16,11 @@ export default function App() {
         <div
           className="home_div1"
           style={{ backgroundImage: `url(${bgin})` }}
-          width="100%" 
+          // width="100%" 
         >
           <div className="home_div1_menu">
             <div className="home_div1_menu_row1">
-              <img src={logo} />
+              <img src={logo} width='40'/>
             </div>
             <div className="home_div1_menu_row2">
               <ul>
@@ -32,11 +32,11 @@ export default function App() {
               </ul>
             </div>
             <div className="home_div1_menu_row3">
-              <img src={user} width="40" />
+              <img src={user} width="30" />
             </div>
           </div>
           <div className="home_div1_row2">
-            <input></input>
+            <input size={50}></input>
             <button>SEARCH</button>
           </div>
         </div>

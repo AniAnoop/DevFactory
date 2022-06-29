@@ -207,11 +207,13 @@ label {
 
 .register {
   width: 100%;
-  /* justify-content: center;
-  align-items: center; */
+   justify-content: center;
+  align-items: center; 
+  display: flex;
+  flex-direction: column;
 }
 .register_row1 {
-  width: 90%;
+  width: 70%;
   text-align: right;
   justify-content: right;
   display: flex;
@@ -224,11 +226,20 @@ label {
 .register_row2 {
   justify-content: center;
   display: flex;
-  width: 100%;
+  width: 70%;
+
+  /* margin-left: 10px; */
+  /* padding-inline: 10px */
+  ;
 }
 .register_row3 {
   display: flex;
   flex-direction: row;
+  font-size: 20px;
+  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-right: 20px;
+  
 }
 
 .register_row4 {
@@ -249,7 +260,7 @@ label {
   padding-right: 150px;
   padding-bottom: 50px; */
 }
-.register_row3_col2 {
+.register_row3 {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -278,12 +289,26 @@ label {
 }
 .register_row3_col2_row2 {
   padding-bottom: 10px;
-  justify-content: left;
+  padding-top: 10px;
+  /* justify-content: left; */
   display: flex;
   flex-direction: row;
   font-family: "Segoe UI";
   font-size: 1rem;
 }
+.register_row3_col2_row2 label{
+  justify-content: left;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+
+}
+ .register_row3_col2_row2 input{
+  justify-content: right;
+  display: flex;
+  flex-direction: row;
+  width:50%
+} 
 .register_row3_col2_button {
   justify-content: right;
   align-items: center;
@@ -308,14 +333,19 @@ label {
 }
 .register_row1_label {
   padding-right: 5px;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 .register_input1 {
   border: none;
   border-bottom: 1px solid silver;
   display: flex;
-  justify-content: right;
+  
+}
+.register_row1_label span{
+  font-weight:bolder;
+  font-size:xx-large;
 }
 
 /*******************end register page(dash.js)***************/
@@ -323,7 +353,7 @@ label {
   width: 100%;
 }
 .home_div1 {
-  /* width: 100%; */
+  width: 100%; 
   /* padding-bottom: 30%;  */
 
   justify-content: center;
@@ -341,11 +371,10 @@ label {
   flex-direction: row;
 }
 .home_div1_menu {
-  width: 70%;
-  margin-left: 50px;
-  margin-bottom: 50px;
-
-  align-content: space-evently;
+ width: 70%;
+ margin: 50px;
+ 
+  align-content: center;
 
   justify-content: center;
   background-color: white;
@@ -353,14 +382,18 @@ label {
   float: row;
 }
 .home_div1_menu_row1 {
-  width: 10%;
-  margin: 10px;
+  /* margin: 10px; */
   justify-content: center;
   align-content: center;
   display: flex;
 }
 .home_div1_menu_row3 {
-  width: 10%;
+  /* width: 10%; */
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+
 }
 .home_div1_menu_row2 ul {
   width: 80%;
@@ -401,7 +434,7 @@ label {
   display: flex;
 }
 .home_div2_prof1_prof {
-  /* width: 70%; */
+  width: 70%; 
 
   display: flex;
   flex-direction: column;

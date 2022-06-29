@@ -24,3 +24,57 @@ INSERT INTO `matrimony`.`tbllanguage` (`txtLanguage`) VALUES ('new'), ('new2');
 
 UPDATE `matrimony`.`tbllanguage` SET `txtLanguage` = 'newdfs', `nextfield`='value' WHERE (`id` = '5');
 
+
+insert into tblusers(txtname,txtmobileno,txtprofilefor,txtpassword,txtemail,txtreligion,txtcaste,dDOB,mothertoungue,reflanguage)
+values('krishna','1245454','self','12235','krishna@gmail.com','hindu','hi','1996-05-16','hindi','3');
+
+
+INSERT INTO `matrimony`.`tblusers` (`txtname`, `txtmobileno`, `txtprofilefor`, `txtpassword`, `txtemail`, `txtreligion`, `txtcaste`, `dDOB`, `mothertoungue`, `reflanguage`, `txtgender`) VALUES ('sreeja', '115465486', 'self', '132656', 'sreeja@gmail.com', 'hindu', 'hi', '1990', 'spanish', '4', 'female');
+
+
+
+
+alter table tblusers add txtgender varchar(50);
+
+
+
+UPDATE `matrimony`.`tblusers` SET `reflanguage` = '1', `txtgender` = 'female' WHERE (`id` = '2');
+
+UPDATE `matrimony`.`tblusers` SET `txtname` = 'shanu', `txtgender` = 'male' WHERE (`id` = '3');
+
+
+UPDATE `matrimony`.`tblusers` SET `reflanguage` = '1', `txtgender` = 'male' WHERE (`id` = '4');
+
+
+INSERT INTO `matrimony`.`tbllanguage` (`id`, `textlanguage`) VALUES ('4', 'spanish');
+UPDATE `matrimony`.`tbllanguage` SET `textlanguage` = 'english' WHERE (`id` = '1');
+UPDATE `matrimony`.`tbllanguage` SET `textlanguage` = 'malayalam' WHERE (`id` = '2');
+UPDATE `matrimony`.`tbllanguage` SET `textlanguage` = 'hindi' WHERE (`id` = '3');
+INSERT INTO `matrimony`.`tbllanguage` (`id`, `textlanguage`) VALUES ('5', 'thamil');
+
+select * from tblusers where dDOB between '1990-11-22 00:00:00' and '1999-11-22 00:00:00';
+
+select * from tblusers where dDOB between '1990-11-22 00:00:00' and '1999-11-22 00:00:00';
+
+
+
+
+
+
+
+
+
+
+//*********************************************************************8888888888*****************************************//
+
+
+SELECT * FROM matrimony.student;
+select studname,english from student where english >=50;
+select studname,maths from student where maths >=50;
+select studname,total,if(total>=110,"pass","fail") as status from student; 
+
+
+select studname,count(studname) from student group by studname having count(studname)>1; 
+
+
+select * from student where  english is null or english='' ;
