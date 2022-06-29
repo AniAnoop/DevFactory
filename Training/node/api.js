@@ -1,82 +1,150 @@
-const express=require('express')
-const app=express()
-const port=8000
-var mysql=require('mysql');
+const { json } = require("express");
+const express = require("express");
+const app = express();
+const port = 8000;
+var mysql = require("mysql");
 
-var con=mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"password",
-    database:"matrimony"
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "password",
+  database: "matrimony",
 });
 
+con.connect(function (err, result) {
+  if (err) console.log(err);
+});
+app.use(express.json());
 
-con.connect(function(err,result){
-    if(err) 
-    console.log(err)
-   
+app.post("/", function (req, res) {
+  con.query("select * from tblusers", function (err, result) {
+    if (err) {
+      // console.log(err);
+      res.send(err);
+    } else {
+      // console.log(result);
+      res.send(result);
+    }
+  });
 });
 
-app.get('/',function(req,res){
-    con.query("select * from tblusers",function(err,result){
-            if(err)
-            {
-            // console.log(err);
-            res.send(err);
-            }
-            else{
-                // console.log(result);
-                res.send(result);
-            }
-        });
-    });
-    
-    app.get('/signup',function(req,res){
-        con.query("insert into tblusers(txtname,txtmobileno) values('archana','126546')",function(err,result){
-                if(err)
-                {
-                 console.log(err);
-                res.send(err);
-                }
-                else{
-                     console.log(result);
-                    res.send(result);
-                }
-            });
-        });
-        app.get('/login',function(req,res){
-            con.query("select * from tblusers where txtname='anjana' and txtpassword='123'",function(err,result){
-                    if(err)
-                    {
-                     console.log(err);
-                    res.send(err);
-                    }
-                    else{
-                        console.log(result);
-                        res.send(result);
-                    }
-                });
-            });
-            app.get('/register',function(req,res){
-                con.query("update tblusers set dDOB='1980-12-02',txtprofilefor='self',txtreligion='christian',txtcaste='general',mothertoungue='malayalam',txtemail='anjana@gmail.com',txtpassword='123',reflanguage='2' where id=9;",function(err,result){
-                        if(err)
-                        {
-                         console.log(err);
-                        res.send(err);
-                        }
-                        else{
-                             console.log(result);
-                            res.send(result);
-                        }
-                    });
-                });
-            
-    
-    
+app.post("/signup", function (req, res) {
+  // var a=JSON.stringify(req.body);
+  // console.log("request==>"+a)
+
+  // res.send("")
+  con.query(
+    "insert into tblusers(txtprofilefor,txtname,txtmobileno) values('" +
+      req.body.profilefor +
+      "','" +
+      req.body.name +
+      "','" +
+      req.body.mobileno +
+      "')",
+    function (err, result) {
+      if (err) {
+        console.log(err);
+        res.send(err);
+      } else {
+        console.log(result);
+        res.send(result);
+      }
+    }
+  );
+});
+app.post("/login", function (req, res) {
+    console.log("name==>"+req.body.name)
+    console.log("password==>"+req.body.password)
+    var sql="select id from tblusers where txtname='" +
+        req.body.name +
+        "' and txtpassword='" +
+        req.body.password +
+        "'";
+        console.log("sql=>"+sql)
+    res.send("")
+//    
+//     console.log(sql)
+//   con.query(
+//     sql,
+//     function (err, result) {
+//       if (err) {
+//         console.log(err);
+//         res.send(err);
+//       } else {
+//         console.log(result);
+//         res.send(result);
+//       }
+//     }
+//   );
+});
+app.get("/register", function (req, res) {
+    console.log("name==>"+req.body.dob)
+    console.log("password==>"+req.body.religion)
+    var sql="update tblusers set dDOB='" +
+          req.body.dob +
+          "',txtreligion='" +
+          req.body.religion +
+          "',txtcaste='" +
+          req.body.caste +
+          "',subcaste='" +
+          req.body.subcaste +
+          "',mothertoungue='" +
+          req.body.mothertoungue +
+          "',txtemail='" +
+          req.body.email +
+          "',txtpassword='" +
+          req.body.password +
+          "' where id=9";
+        console.log("sql=>"+sql)
+    res.send("")
+//   con.query(
+//     "update tblusers set dDOB='" +
+//       req.body.dob +
+//       "',txtreligion='" +
+//       req.body.religion +
+//       "',txtcaste='" +
+//       req.body.caste +
+//       "',mothertoungue='" +
+//       req.body.mothertoungue +
+//       "',txtemail='" +
+//       req.body.email +
+//       "',txtpassword='" +
+//       req.body.password +
+//       "',subcaste='" +
+//       req.body.subcaste +
+//       "' where id=9",
+//     function (err, result) {
+//       if (err) {
+//         console.log(err);
+//         res.send(err);
+//       } else {
+//         console.log(result);
+//         res.send(result);
+//       }
+//     }
+//   );
+});
+app.post("/search", function (req, res) {
+  con.query(
+    "select id,txtname,dDOB,txtreligion from tblusers where txtname like '" +
+      req.body.name +
+      "' ",
+    function (err, result) {
+      if (err) {
+        // console.log(err);
+        res.send(err);
+      } else {
+        // console.log(result);
+        res.send(result);
+      }
+    }
+  );
+});
+
 // app.get("/signup",function(req,res)
 // {
 //     res.send("signup api");
 // });
-app.listen(port,function(){
-    console.log("server is running");
- });
+app.listen(port, function () {
+  console.log("server is running");
+});
