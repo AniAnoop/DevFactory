@@ -389,8 +389,8 @@ label {
 }
 .home_div1_menu_row3 {
   /* width: 10%; */
+  
   align-content: center;
-  justify-content: center;
   display: flex;
   flex-direction: row;
 
@@ -407,6 +407,7 @@ label {
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
+  align-content: center;
   padding-inline-end: 20px;
 }
 .home_div2_prof1_prof_row {

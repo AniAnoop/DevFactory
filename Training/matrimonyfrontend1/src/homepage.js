@@ -32,7 +32,7 @@ export default function App() {
               </ul>
             </div>
             <div className="home_div1_menu_row3">
-              <img src={user} width="30" />
+              <img src={user}  width="40"/>
             </div>
           </div>
           <div className="home_div1_row2">

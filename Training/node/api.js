@@ -109,7 +109,7 @@ app.post("/search", function (req, res) {
   con.query(
     "select id,txtname,dDOB,txtreligion from tblusers where txtname like '" +
       req.body.name +
-      "' ",
+      "%' ",
     function (err, result) {
       if (err) {
         // console.log(err);
@@ -139,7 +139,7 @@ app.post("/", function (req, res) {
   
     // res.send("")
     con.query(
-      "select id,txtname,txtmobileno,txtprofilefor,txtpassword,txtemail,txtreligion,txtcaste,subcaste,dDOB,mothertoungue,reflanguage,txtgender from tblusers",
+      "select id,txtname,txtmobileno,txtprofilefor,txtpassword,txtemail,txtreligion,txtcaste,subcaste,dDOB,mothertoungue,reflanguage,txtgender from tblusers where id="+req.body.id+"",
       function (err, result) {
         if (err) {
           console.log(err);
