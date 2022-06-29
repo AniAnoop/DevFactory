@@ -77,52 +77,33 @@ app.post("/login", function (req, res) {
 //     }
 //   );
 });
-app.get("/register", function (req, res) {
-    console.log("name==>"+req.body.dob)
-    console.log("password==>"+req.body.religion)
-    var sql="update tblusers set dDOB='" +
-          req.body.dob +
-          "',txtreligion='" +
-          req.body.religion +
-          "',txtcaste='" +
-          req.body.caste +
-          "',subcaste='" +
-          req.body.subcaste +
-          "',mothertoungue='" +
-          req.body.mothertoungue +
-          "',txtemail='" +
-          req.body.email +
-          "',txtpassword='" +
-          req.body.password +
-          "' where id=9";
-        console.log("sql=>"+sql)
-    res.send("")
-//   con.query(
-//     "update tblusers set dDOB='" +
-//       req.body.dob +
-//       "',txtreligion='" +
-//       req.body.religion +
-//       "',txtcaste='" +
-//       req.body.caste +
-//       "',mothertoungue='" +
-//       req.body.mothertoungue +
-//       "',txtemail='" +
-//       req.body.email +
-//       "',txtpassword='" +
-//       req.body.password +
-//       "',subcaste='" +
-//       req.body.subcaste +
-//       "' where id=9",
-//     function (err, result) {
-//       if (err) {
-//         console.log(err);
-//         res.send(err);
-//       } else {
-//         console.log(result);
-//         res.send(result);
-//       }
-//     }
-//   );
+app.post("/register", function (req, res) {
+  con.query(
+    "update tblusers set dDOB='" +
+      req.body.dob +
+      "',txtreligion='" +
+      req.body.religion +
+      "',txtcaste='" +
+      req.body.caste +
+      "',mothertoungue='" +
+      req.body.mothertoungue +
+      "',txtemail='" +
+      req.body.email +
+      "',txtpassword='" +
+      req.body.password +
+      "',subcaste='" +
+      req.body.subcaste +
+      "' where id",
+    function (err, result) {
+      if (err) {
+        console.log(err);
+        res.send(err);
+      } else {
+        console.log(result);
+        res.send(result);
+      }
+    }
+  );
 });
 app.post("/search", function (req, res) {
   con.query(
@@ -140,6 +121,37 @@ app.post("/search", function (req, res) {
     }
   );
 });
+app.post("/", function (req, res) {
+    con.query("select * from tblusers", function (err, result) {
+      if (err) {
+        // console.log(err);
+        res.send(err);
+      } else {
+        // console.log(result);
+        res.send(result);
+      }
+    });
+  });
+  
+  app.post("/profile", function (req, res) {
+    // var a=JSON.stringify(req.body);
+    // console.log("request==>"+a)
+  
+    // res.send("")
+    con.query(
+      "select id,txtname,txtmobileno,txtprofilefor,txtpassword,txtemail,txtreligion,txtcaste,subcaste,dDOB,mothertoungue,reflanguage,txtgender from tblusers",
+      function (err, result) {
+        if (err) {
+          console.log(err);
+          res.send(err);
+        } else {
+          console.log(result);
+          res.send(result);
+        }
+      }
+    );
+  });
+  
 
 // app.get("/signup",function(req,res)
 // {
