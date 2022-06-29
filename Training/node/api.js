@@ -93,7 +93,7 @@ app.post("/register", function (req, res) {
       req.body.password +
       "',subcaste='" +
       req.body.subcaste +
-      "' where id",
+      "' where id="+req.body.id+"",
     function (err, result) {
       if (err) {
         console.log(err);
