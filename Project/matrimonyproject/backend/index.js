@@ -3,7 +3,9 @@ const express = require("express");
 const app = express();
 const port = 8000;
 var mysql = require("mysql");
+const cors = require("cors");
 
+app.use(cors());
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -53,29 +55,33 @@ app.post("/signup", function (req, res) {
   );
 });
 app.post("/login", function (req, res) {
-    console.log("name==>"+req.body.name)
-    console.log("password==>"+req.body.password)
-    var sql="select id from tblusers where txtname='" +
-        req.body.name +
-        "' and txtpassword='" +
-        req.body.password +
-        "'";
-        console.log("sql=>"+sql)
-    res.send("")
-//    
-//     console.log(sql)
-//   con.query(
-//     sql,
-//     function (err, result) {
-//       if (err) {
-//         console.log(err);
-//         res.send(err);
-//       } else {
-//         console.log(result);
-//         res.send(result);
-//       }
-//     }
-//   );
+  // console.log("name==>"+req.body.name)
+  // console.log("password==>"+req.body.password)
+  // var sql="select id from tblusers where txtname='" +
+  //     req.body.name +
+  //     "' and txtpassword='" +
+  //     req.body.password +
+  //     "'";
+  //     console.log("sql=>"+sql)
+  // res.send("")
+  //
+  //  console.log(sql)
+  con.query(
+    "select id from tblusers where txtname='" +
+      req.body.name +
+      "' and txtpassword='" +
+      req.body.password +
+      "'",
+    function (err, result) {
+      if (err) {
+        console.log(err);
+        res.send(err);
+      } else {
+        console.log(result);
+        res.send(result);
+      }
+    }
+  );
 });
 app.post("/register", function (req, res) {
   con.query(
@@ -93,7 +99,9 @@ app.post("/register", function (req, res) {
       req.body.password +
       "',subcaste='" +
       req.body.subcaste +
-      "' where id="+req.body.id+",
+      "' where id=" +
+      req.body.id +
+      "",
     function (err, result) {
       if (err) {
         console.log(err);
@@ -122,36 +130,37 @@ app.post("/search", function (req, res) {
   );
 });
 app.post("/", function (req, res) {
-    con.query("select * from tblusers", function (err, result) {
+  con.query("select * from tblusers", function (err, result) {
+    if (err) {
+      // console.log(err);
+      res.send(err);
+    } else {
+      // console.log(result);
+      res.send(result);
+    }
+  });
+});
+
+app.post("/profile", function (req, res) {
+  // var a=JSON.stringify(req.body);
+  // console.log("request==>"+a)
+
+  // res.send("")
+  con.query(
+    "select id,txtname,txtmobileno,txtprofilefor,txtpassword,txtemail,txtreligion,txtcaste,subcaste,dDOB,mothertoungue,reflanguage,txtgender from tblusers where id=" +
+      req.body.id +
+      "",
+    function (err, result) {
       if (err) {
-        // console.log(err);
+        console.log(err);
         res.send(err);
       } else {
-        // console.log(result);
+        console.log(result);
         res.send(result);
       }
-    });
-  });
-  
-  app.post("/profile", function (req, res) {
-    // var a=JSON.stringify(req.body);
-    // console.log("request==>"+a)
-  
-    // res.send("")
-    con.query(
-      "select id,txtname,txtmobileno,txtprofilefor,txtpassword,txtemail,txtreligion,txtcaste,subcaste,dDOB,mothertoungue,reflanguage,txtgender from tblusers where id="+req.body.id+"",
-      function (err, result) {
-        if (err) {
-          console.log(err);
-          res.send(err);
-        } else {
-          console.log(result);
-          res.send(result);
-        }
-      }
-    );
-  });
-  
+    }
+  );
+});
 
 // app.get("/signup",function(req,res)
 // {
