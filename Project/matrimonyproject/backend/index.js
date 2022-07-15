@@ -7,9 +7,9 @@ const cors = require("cors");
 
 app.use(cors());
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password",
+  host: "database-1.cb320kb0xyg5.us-west-1.rds.amazonaws.com",
+  user: "admin",
+  password: "imstrong",
   database: "matrimony",
 });
 
@@ -92,16 +92,14 @@ app.post("/register", function (req, res) {
       "',txtcaste='" +
       req.body.caste +
       "',mothertoungue='" +
-      req.body.mothertoungue +
+      req.body.mothertongue +
       "',txtemail='" +
       req.body.email +
       "',txtpassword='" +
       req.body.password +
       "',subcaste='" +
       req.body.subcaste +
-      "' where id=" +
-      req.body.id +
-      "",
+      "' where id='1'",
     function (err, result) {
       if (err) {
         console.log(err);
@@ -115,7 +113,7 @@ app.post("/register", function (req, res) {
 });
 app.post("/search", function (req, res) {
   con.query(
-    "select id,txtname,dDOB,txtreligion from tblusers where txtname like '" +
+    "select id,txtname,txtprofilefor,txtreligion,txtgender,dDOB,mothertoungue,subcaste from tblusers where txtname like '" +
       req.body.name +
       "%' ",
     function (err, result) {
@@ -161,6 +159,20 @@ app.post("/profile", function (req, res) {
     }
   );
 });
+app.post("/religion",function(req,res){
+  con.query(
+    "select religion_id,religion from tblreligion",function(err,result){
+      if(err){
+        console.log(err);
+        res.send(err);
+      }
+      else{
+        console.log(result);
+        res.send(result);
+      }
+    });
+});
+
 
 // app.get("/signup",function(req,res)
 // {

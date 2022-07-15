@@ -1,7 +1,7 @@
 body {
   /* background-image: "home_christian_bg.webp"; */
   margin: 0;
-  background-color: rgb(243, 243, 248);
+  background-color: white;
 }
 label {
   color: black;
@@ -32,14 +32,6 @@ label {
   align-items: center;
   justify-content: right;
 }
-.fr1_col2_b {
-  color: white;
-  background-color: blue;
-  padding: 5px 20px;
-  border-radius: 25px;
-  margin-left: 10%;
-  border: 0;
-}
 .fr1_col1_col1 {
   display: flex;
   flex-direction: column;
@@ -50,6 +42,48 @@ label {
   display: flex;
   flex-direction: column;
 }
+.fr1_col2_label {
+  padding-right: 10px;
+}
+.fr1_login_button1 {
+  color: white;
+  background-color: rgb(22, 22, 129);
+  padding: 5px 20px;
+  border-radius: 100px;
+  margin-left: 10%;
+  border: 0;
+  width: 90px;
+}
+.login_input {
+  width: 100%;
+}
+.fr1_login_button2 {
+  width: 100%;
+  background-color: orange;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: medium;
+  padding-inline-start: 10px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+}
+.login_label {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.fr1_label_checkbox {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+/* div.fade.in.modal{
+  display: flex !important;
+}
+.modal-dialog{
+  margin: auto;
+} */
 
 /****************1st page row 1 end*****************/
 
@@ -64,7 +98,7 @@ label {
   padding: 20px 5%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  width: 70%;
+  width: 100%;
   flex-direction: column;
 }
 
@@ -144,6 +178,7 @@ label {
   border: none;
   display: flex;
   outline: none;
+  width: 50%;
 }
 .fr2_input1 {
   border: none;
@@ -207,8 +242,8 @@ label {
 
 .register {
   width: 100%;
-   justify-content: center;
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
 }
@@ -230,7 +265,6 @@ label {
 
   /* margin-left: 10px; */
   /* padding-inline: 10px */
-  ;
 }
 .register_row3 {
   display: flex;
@@ -239,7 +273,6 @@ label {
   padding-bottom: 25px;
   padding-top: 10px;
   padding-right: 20px;
-  
 }
 
 .register_row4 {
@@ -296,19 +329,18 @@ label {
   font-family: "Segoe UI";
   font-size: 1rem;
 }
-.register_row3_col2_row2 label{
+.register_row3_col2_row2 label {
   justify-content: left;
   display: flex;
   flex-direction: row;
   width: 50%;
-
 }
- .register_row3_col2_row2 input{
+.register_row3_col2_row2 input {
   justify-content: right;
   display: flex;
   flex-direction: row;
-  width:50%
-} 
+  width: 50%;
+}
 .register_row3_col2_button {
   justify-content: right;
   align-items: center;
@@ -335,65 +367,94 @@ label {
   padding-right: 5px;
   font-size: 1.5rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  
 }
 .register_input1 {
   border: none;
+  outline: none;
   border-bottom: 1px solid silver;
   display: flex;
-  
 }
-.register_row1_label span{
-  font-weight:bolder;
-  font-size:xx-large;
+.register_row1_label span {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.register_select {
+  border: none;
+  display: flex;
+  outline: none;
+  width: 50%;
 }
 
 /*******************end register page(dash.js)***************/
 .home {
   width: 100%;
- align-content:center;
-   display: flex; 
-   flex-direction: column;
-  justify-content: center;
+  /* align-content: center; */
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(209, 209, 240);
 
+  /* justify-content: center; */
 }
 .home_div1 {
-  /* width: 100%;   */
+  width: 100%;
   /* padding-bottom: 30%;  */
-
+  align-content: center;
+  align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2% ;
+  /* background-repeat:no-repeat; */
+  /* background-size: cover; */
 }
 .home_div1_row2 {
+  width: 100%;
+  /* padding-block: 40px; */
+  padding-bottom: 100px;
+  height: 50px;
   justify-content: center;
   display: flex;
   flex-direction: row;
 }
 .home_div1_menu {
- width: 60%;
- margin: 100px;
- 
-  align-content: center;
-
-  justify-content: center;
+  width: 70%;
+  margin: 50px;
+  /* align-content: center;
+  justify-content: center; */
   background-color: white;
   display: flex;
-  float: row;
+  flex-direction: row;
+  border-radius: 10px;
+  margin-bottom: 100px;
+
+  /* float: row; */
 }
 .home_div1_menu_row1 {
   /* margin: 10px; */
+  justify-content: left;
+  width: 10%;
+  display: flex;
+  padding-left: 10px;
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+.home_div1_menu_row2 {
   justify-content: center;
   align-content: center;
+  align-items: center;
+  justify-items: center;
+  width: 80%;
   display: flex;
 }
 .home_div1_menu_row3 {
-  /* width: 10%; */
-  
-  align-content: center;
+  width: 10%;
+  justify-content: right;
   display: flex;
   flex-direction: row;
-
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .home_div1_menu_row2 ul {
   /* width: 80%; */
@@ -411,38 +472,43 @@ label {
   padding-inline-end: 20px;
 }
 
-.home_div2{
-  width:100%;
+.home_div2 {
+  width: 100%;
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-content: center;
+  align-items: center;
 }
 .home_div2_prof1 {
-  margin: 5%; 
- border-radius: 20px;
-justify-content: center;
-
- background-color: white;
- width:50%;
- display: flex;
- /* flex-direction: row;*/ 
+  margin: 2%;
+  border-radius: 20px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: white;
+  width: 70%;
+  display: flex;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  /* flex-direction: row;*/
 }
+
 .home_div2_prof1_img {
   /* width: 30%; */
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
+
   display: flex;
- }
- .home_div2_prof1_prof {
-  width: 60%; 
+}
+.home_div2_prof1_prof {
+  width: 60%;
 
   display: flex;
   flex-direction: column;
- }
+}
 
 .home_div2_prof1_prof_row {
- 
   display: flex;
   flex-direction: column;
   /* column-count: 2;
@@ -450,27 +516,24 @@ justify-content: center;
 
   /* row-gap: 10px; */
 }
-.home_div2_prof1_prof_row1{
+.home_div2_prof1_prof_row1 {
   display: flex;
   flex-direction: row;
 }
-
-
-.home_empty{
+.home_empty {
   width: 50%;
   display: flex;
 }
 
-.home_label1{
+.home_label1 {
   width: 50%;
   justify-content: left;
   display: flex;
-padding-left: 10px;
-padding-top: 10px;
-
+  padding-left: 10px;
+  padding-top: 10px;
 }
-.home_label2{
-  width:50%;
+.home_label2 {
+  width: 50%;
   justify-content: left;
   padding-left: 10px;
   display: flex;
@@ -478,23 +541,42 @@ padding-top: 10px;
 .home h {
   font-size: 2rem;
 }
+.home_div1_row2 input {
+  border: none;
+  outline: none;
+}
+.home_button {
+  border: none;
+  background-color: rgb(231, 140, 140);
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 60px;
+}
+.home_input {
+  height: 60px;
+  width: 63%;
+}
 
 /******************end homepage*********************/
-.profile{
+
+.profile {
   background-color: white;
-  
+  width: 100%;
 }
 .profile_div2 {
   /* margin-top:50px; */
   margin-left: 20%;
-  margin-right: 20%; 
+  margin-right: 20%;
+  background-color: white;
   display: flex;
   flex-direction: row;
-  
 }
-.profile_div2_prof1_prof1{
-padding-left: 10px;
-} 
+.profile_div2_prof1_prof1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  padding-left: 10px;
+}
 .profile_div1_menu {
   width: 100%;
   display: flex;
@@ -503,14 +585,20 @@ padding-left: 10px;
   justify-content: center;
   align-content: space-around;
   justify-content: space-between;
-
-  
+  border-bottom: 1px solid green;
 }
 .profile_div1_menu_row2 ul {
   display: flex;
   flex-direction: row;
 }
-
+.profile_div1_menu_row1 {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.profile_div1_menu_row3 {
+  padding-right: 10px;
+  padding-top: 10px;
+}
 .profile_div1_menu_row2 ul li {
   align-content: space-around;
   padding-inline: 10px;
@@ -520,58 +608,62 @@ padding-left: 10px;
 
 .profile_div2_prof1_about {
   justify-content: center;
-width: 50%;
-  background-color: rgb(153, 153, 239);
-  margin-top:50px;
-   margin-left: 20%;
-  margin-right: 20%; 
+  width: 70%;
+  background-color: rgb(237, 237, 244);
+  margin-top: 50px;
+  margin-left: 15%;
+  margin-right: 15%;
   display: flex;
   flex-direction: column;
   padding: 10px;
   border-radius: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 200px;
 }
 .profile_div2 {
   margin-top: 50px;
-  width: 50%;
-  background-color:  rgb(153, 153, 239);
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: rgb(237, 237, 244);
+  /* background-color: rgb(232, 232, 250); */
   border-radius: 15px;
 }
- .profile_li ul li{
+.profile_li ul li {
   column-gap: 50px;
-
-} 
-.profile_ul{
+}
+.profile_ul {
   display: flex;
   flex-direction: row;
+
   /* padding-inline: 10px; */
 }
-.profile_div2_prof1_img{
+.profile_div2_prof1_img {
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
 }
 
 /********************end profile page********************/
-.outer_div {
+/* .outer_div {
   width: 40%;
-  padding: 10px 10px; 
+  padding: 10px 10px;
   background-color: white;
-   /* margin: 50px; */
+   margin: 50px; 
   border-radius: 10px;
   justify-content: center;
   align-items: center;
   display: flex;
   margin-left: 30%;
-  /* margin-right: 50px; */
+  margin-right: 50px; 
   margin-top: 15%;
-   
 }
 .login_div1 {
   display: flex;
   flex-direction: row;
-  /* padding-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 40px;
   border-bottom-color: black; 
-  border-style: ridge; */
+  border-style: ridge;
 }
 .close_button {
   justify-content: right;
@@ -579,10 +671,8 @@ width: 50%;
   border: none;
   outline: 0px;
   background-color: white;
-  
-  
 }
-.login_button{
+.login_button {
   background-color: rgb(244, 244, 6);
   display: flex;
   justify-content: center;
@@ -591,21 +681,17 @@ width: 50%;
   padding-inline: 20px;
   color: white;
   padding: 5px;
-border: none;
-
-
+  border: none;
 }
 .login {
   justify-content: center;
 }
-/* .login_div1{
 
-} */
+
 .login_email {
   display: flex;
   flex-direction: column;
   padding-inline: 20px;
-
 }
 .login_pass {
   display: flex;
@@ -622,16 +708,15 @@ border: none;
 }
 .login_label {
   padding-right: 240px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   font-size: 20;
-
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20;
 }
-.login_input{
+.login_input {
   padding: 3px;
 }
-.login label{
+.login label {
   padding-top: 10px;
 }
-.login_checkbox{
+.login_checkbox {
   padding-bottom: 10px;
-}
+} */

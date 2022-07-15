@@ -1,0 +1,25 @@
+var mysql=require("mysql");
+
+var con=mysql.createConnection({
+    host:"database-1.cb320kb0xyg5.us-west-1.rds.amazonaws.com",
+    user:"admin",
+    password:"imstrong",
+    database:"matrimony",
+    
+});
+// con.connect(function(err){
+    
+// });
+exports.handler=(event,context,callback)=>{
+    context.callbackWaitsForEmptyEventLoop=false;
+    let buff=new Buffer(event.body,'base64')
+    let text=buff.toString('ascii')
+   / let req = JSON.parse(text);
+    let name="hello";
+    return callback(null,name);
+    let temp="let buff;
+     //return callback(null,temp)
+    con.query(temp,(err,result)=>{
+       // return callback(null,result)
+    })
+};

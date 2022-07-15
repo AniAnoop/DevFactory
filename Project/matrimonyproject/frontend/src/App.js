@@ -11,56 +11,99 @@ import a5 from "./images/a5.webp";
 import bg from "./images/bg.webp";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
+//import { Button } from "react-bootstrap";
 
 export default function App() {
   const [nameValue, setNameFunc] = useState("");
   const [mobNumber, setMobNumberFunc] = useState("");
   const navigate = useNavigate();
-  const [proflfor, setProfileFor]=useState("")
-  const handleusernamechange=(e)=>{
+  const [proflfor, setProfileFor] = useState("");
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const [loginname, setLoginNameFun] = useState("");
+  const [loginpassword, setPasswordFun] = useState("");
+  const [id,setId]=useState("");
+  const handleNameClick = (e) => {
+    e.preventDefault();
+    setLoginNameFun(e.target.value);
+  };
+  const handlePasswordClick = (e) => {
+    e.preventDefault();
+    setPasswordFun(e.target.value);
+  };
+
+  const handleusernamechange = (e) => {
     e.preventDefault();
     setNameFunc(e.target.value);
-  }
+  };
 
-  const handMobileNo=(e)=>{
+  const handMobileNo = (e) => {
     e.preventDefault();
     setMobNumberFunc(e.target.value);
+  };
 
-  }
-
-  const handleRegisterClick = (e) => {
+  const handleRegisterClick = (e)=> {
     e.preventDefault();
-    const url = "http://localhost:8000/signup";
-    const data = {
-      profilefor: proflfor,
-      name: nameValue,
-      mobileno: mobNumber,
-    };
+    const url = "https://59xv0oj7y1.execute-api.us-west-1.amazonaws.com/signup";
+    var req = '{"txtprofilefor": "'+proflfor+'","txtname": "'+nameValue+'","txtmobileno": "'+mobNumber+'"}'
     const header = {};
     console.log("url==>" + url);
     axios
-      .post(url, data, header)
+      .post(url, req, header)
       .then((res) => {
-        console.log(res.data);
-        // alert(res.data.insertId);
-         navigate("/dash");
+        console.log("res"+JSON.stringify(res.data));
+        var uid=res.data.insertId;
+        setId(uid);
+        localStorage.setItem("id",uid)
+        alert("Registered");
+        navigate("/dash");
       })
       .catch((err) => {
         console.log(err);
       });
 
     // navigate("/dash");
-  };
+  }
 
   // const clickHandler=(e)=>{
   //   e.preventDefault();
   //   navigate("/dash")
   // }
 
-  const handleDropdown=(e)=>{
-    e.preventDefault()
-    setProfileFor(e.target.value)
-  }
+  const handleDropdown = (e) => {
+    e.preventDefault();
+    setProfileFor(e.target.value);
+  };
+  const handleLoginClick = (e) => {
+    e.preventDefault();
+    //const url = "http://localhost:8000/login";
+    const url =
+      "https://oq3c2ps58k.execute-api.us-west-1.amazonaws.com/login";
+    var req='{ "txtname":"'+loginname+'","password":"'+loginpassword+'"}'
+    // const data = {
+    //   txtname: "loginname",
+    //   password: "loginpassword",
+    // };
+    const header = {};
+    console.log("url==>" + url);
+    axios
+      .post(url, req, header)
+      .then((res) => {
+        console.log(res.data);
+
+        if (res.data.length > 0) {
+          navigate("/home");
+        } else {
+          alert("Incorrect username or password");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <>
       <div className="fr1">
@@ -75,16 +118,65 @@ export default function App() {
           </div>
         </div>
         <div className="fr1_col2">
-          <label>Already a member</label>
+          <label className="fr1_col2_label">Already a member</label>
           <div>
             <button
-              className="fr1_col2_b"
-              onClick={(e) => {
-                navigate("/login");
-              }}
+              className="fr1_login_button1"
+              variant="primary"
+              onClick={handleShow}
             >
               Login
             </button>
+            <Modal
+              show={show}
+              onHide={handleClose}
+              backdrop="static"
+              keyboard={false}
+              centered
+            >
+              <Modal.Header closeButton>
+                <Modal.Title>Login</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                Matrimony Id/Mobile No./E-mail
+                <br />
+                <input
+                  className="login_input"
+                  value={loginname}
+                  onChange={(e) => {
+                    handleNameClick(e);
+                  }}
+                ></input>
+                <br />
+                Password
+                <br />
+                <input
+                  className="login_input"
+                  value={loginpassword}
+                  onChange={(e) => {
+                    handlePasswordClick(e);
+                  }}
+                ></input>
+                <br />
+                <input type="checkbox"></input>
+                <label className="fr1_label_checkbox">Keep me loggin</label>
+                <br />
+                <button
+                  className="fr1_login_button2"
+                  variant="primary"
+                  onClick={(e) => {
+                    handleLoginClick(e);
+                  }}
+                >
+                  LOGIN
+                </button>
+                <br />
+                <label className="login_label">
+                  Forgot Password? | Login Via OTP
+                </label>
+              </Modal.Body>
+              <Modal.Footer></Modal.Footer>
+            </Modal>
           </div>
         </div>
       </div>
@@ -98,7 +190,12 @@ export default function App() {
           <div className="fr2_row">
             <div className="fr2_div1">
               <label className="fr2_l4">Matrimonial Profile For</label>
-              <select onChange={(e)=>handleDropdown(e)} value={proflfor} className="fr2_select" placeholder="select">
+              <select
+                onChange={(e) => handleDropdown(e)}
+                value={proflfor}
+                className="fr2_select"
+                placeholder="select"
+              >
                 <option>Select</option>
                 <option>self</option>
                 <option>Relative</option>
@@ -140,7 +237,7 @@ export default function App() {
               By clicking on Register Free, you agree
             </label>
             <label className="f2_label1">to Terms & Conditions</label>
-            <label>and</label>
+            <label className="fr2_l3">and</label>
             <label className="f2_label1">Privacy Policy</label>{" "}
           </div>
         </div>
