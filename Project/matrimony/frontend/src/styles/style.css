@@ -1,0 +1,243 @@
+body {
+  background-color:white;
+  /* display:flex; */
+  /* width: 100%; */
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home_row1 {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-style: ridge;
+}
+
+.home_row1_left {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 5%;
+}
+
+.home_row1_right {
+  width: 45%;
+  padding-right: 5%;
+  justify-content: right;
+  align-items: center;
+  display: flex;
+  /* background-color: greenyellow; */
+}
+
+.home_row1_left_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.home_row1_left_img {
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.home_row1_left_text_label1 {
+  padding-bottom: 5px;
+  font-size: 20.8px;
+}
+.home_row1_left_text_label2 {
+  font-size: 16px;
+}
+
+.home_row1_right label {
+  padding-right: 10px;
+  font-size: 16px;
+}
+
+.home_row1_right button {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: #18719b;
+  color: white;
+  font-size: 16px;
+  border: 0;
+}
+
+.home_row1_right button:hover {
+  background-color: rgb(41, 41, 61);
+}
+
+/***************end 1st row of App/home***********/
+
+.home_row2 {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background-attachment: fixed;
+}
+
+.home_row2_inner {
+  width: 75%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  padding: 50px;
+  align-content: center;
+}
+
+.home_row2_inner_label1{
+  font-size: 32px;
+  color: white;
+  padding-bottom: 15px;
+}
+
+.home_row2_inner_label2{
+  font-size: 25.6px;
+  color:white;
+  padding-bottom: 15px;
+}
+
+.home_row2_inner_row1 {
+  background-color: white;
+  justify-content: center;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.home_row2_inner_row1 tr {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.home_row2_inner_row1_col,
+.home_row2_inner_row1_col1 {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  
+}
+
+.home_row2_inner_row1_col1{
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+.home_row2_inner_row1_col label,
+.home_row2_inner_row1_col1 label {
+  padding-bottom: 10px;
+  /* font-size: 16px; */
+  }
+
+.home_row2_inner_row1_col select {
+  border: 0ch;
+  outline: 0ch;
+  height: 30px;
+}
+
+.home_row2_inner_row1_col input,
+.home_row2_inner_row1_col1 input {
+  border: 0ch;
+  outline: 0ch;
+}
+
+.home_row2_inner_row1_col_button {
+  width: 25%;
+}
+
+.home_row2_inner_row1_col_button button:hover{
+  background-color: rgb(41, 41, 61);
+}
+
+.home_row2_inner_row1_col_button button {
+  width: 100%;
+  height: 100%;
+  background-color: #18719b;
+  border: none;
+  color: white;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.home_row2_tremCondition{
+  padding-top: 10px;
+  color: white;
+  justify-content: right;
+  display: flex;
+  width: 100%;
+}
+
+.home_row2_tremCondition label{
+  padding: 2px;
+}
+
+.home_row2_tremCondition_label2{
+  color:#18719b;
+}
+
+
+/*****************end 2nd row of App/home**********/
+.home_row3 {
+  width: 100%;
+  background-color: white;
+  height: 40vh;
+  margin-top: 0%;display: flex;
+}
+
+.home_row3 ul {
+  padding: 10px;
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  /* padding-top: 30px; */
+  /* padding-bottom: 30px; */
+  /* justify-content: center; */
+}
+
+.home_row3 li {
+  width: 18%;
+  /* background-color: white; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  margin: 1%;
+}
+
+.home_row3 li img {
+  padding-bottom: 30px;
+}
+
+.home_row3 li div {
+  justify-content: center;
+  display: flex;
+}
+
+.home_row3 li label {
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+}
+
+/**************************************************************/
+/******************* end App/home page************************/
+/*************************************************************/
+
+
+.signup{
+  background-color: rosybrown;
+  margin: 0;
+}
+
+
+/*************************************************************/
+/***********************end signup page***********************/
