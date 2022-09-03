@@ -6,9 +6,12 @@ import a4 from "./images/a4.webp";
 import a5 from "./images/a5.webp";
 import bg from "./images/background.webp";
 import "./styles/style.css";
+import {useNavigate} from "react-router-dom";
+import React from "react";
 // import './App.css';
 
 function App() {
+  const navigate=useNavigate();
   return (
     <>
       <div>
@@ -59,7 +62,7 @@ function App() {
                   <input placeholder="Mobile number"></input>
                 </td>
                 <td className="home_row2_inner_row1_col_button">
-                  <button>Register Free</button>
+                  <button onClick={(e)=>{navigate("/signup")}}>Register Free</button>
                 </td>
               </tr>
             </div>
