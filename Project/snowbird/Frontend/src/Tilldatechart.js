@@ -12,11 +12,22 @@ import {
 import { Bar } from "react-chartjs-2";
 import datalabels from "chartjs-plugin-datalabels";
 
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  datalabels
+);
+
+
 export default function Tilldatechart() {
   // const [array, setArray] = [];
   const [planedArray, setPlanedArr] = useState([]);
   const [completeArray, setCompleteArr] = useState([]);
-  const [dateArray, setDateArray] =useState([]);
+  const [dateArray, setDateArray] = useState([]);
 
   useEffect(() => {
     // setPlanedArr([]);
@@ -29,7 +40,6 @@ export default function Tilldatechart() {
       .then((res) => {
         console.log("res==>", res.data);
         var tempPlan = [];
-        //  planedArray=[...planedArray,tempPlan];
         var sum = 0;
         for (var i = 0; i <= res.data.length; i = i + 2) {
           var a = res.data[i].points;
@@ -37,14 +47,12 @@ export default function Tilldatechart() {
           sum = parseInt(sum) + parseInt(a) + parseInt(b);
           tempPlan = [...tempPlan, sum];
           console.log("sum==>", sum);
-          // setPlanedArr(...tempPlan);
         }
-        setPlanedArr(...setDateArray,tempPlan);
-        
+         setPlanedArr(tempPlan);
+        // planedArray=[...tempPlan];
+        // planedArray=[...planedArray,tempPlan];
       })
       .catch((err) => {});
-
-      setCompleteArr([]);
 
     const curl =
       "https://rmc5zpx6je.execute-api.us-west-1.amazonaws.com/tdchart1_complete";
@@ -55,17 +63,14 @@ export default function Tilldatechart() {
       .post(curl, req, headers)
       .then((res) => {
         console.log("complete==>", res.data);
-        // setDateArray(res.data[0].cdate);
-        // console.log("date==>",res.data[0].cdate);
         var csum = 0;
         var tempComp = [];
         for (var j = 0; j <= res.data.length; j++) {
           csum = parseInt(csum) + parseInt(res.data[j].cpoint);
           console.log("csum==>", csum);
           tempComp = [...tempComp, csum];
-          // setCompleteArr(...tempComp);
         }
-       setCompleteArr(tempComp);
+        setCompleteArr(tempComp);
       })
       .catch(() => {});
 
@@ -76,22 +81,13 @@ export default function Tilldatechart() {
     axios
       .post(durl, dreq, dheader)
       .then((res) => {
-        console.log("date==>",res.data);
+        console.log("date==>", res.data);
         setDateArray(res.data);
       })
       .catch(() => {});
   }, []);
 
-  ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-    datalabels
-  );
-
+  
   const options = {
     responsive: true,
     plugins: {
@@ -147,15 +143,19 @@ export default function Tilldatechart() {
 
   const data = {
     labels: [
-      "5-23-2022", "5-24-2022", "5-25-2022", "5-26-2022", "5-27-2022"
-      // dateArray.map((itemd,index)=>itemd.cdate) 
+      "5-23-2022",
+      "5-24-2022",
+      "5-25-2022",
+      "5-26-2022",
+      "5-27-2022",
+      // dateArray.map((itemd,index)=>itemd.cdate)
     ],
     datasets: [
       {
         label: "Planned Cumulative",
         data: [
-          6, 13, 18.5, 25.5, 35,
-          // PlanedArray.map((itemp,index)=>itemp.sum)
+          // 6, 13, 18.5, 25.5, 35,
+          planedArray.map((itemp, index) => itemp.sum),
         ],
         backgroundColor: "blue",
         barPercentage: 1,
@@ -165,7 +165,7 @@ export default function Tilldatechart() {
         label: "Completed Cumulative",
         data: [
           0.5, 4.5, 4.5, 5.5, 5.5,
-          // completeArray.map((itemc,index)=>itemc.csum)
+          //  completeArray.map((itemc,index)=>itemc.csum)
         ],
         backgroundColor: "red",
         barPercentage: 1,

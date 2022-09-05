@@ -2,7 +2,7 @@ import downarrow from "./images/downarrow.png";
 import logo from "./images/snowlogo.png";
 //import { useNavigate } from 'react-router-dom'
 
-import "./styles/style2.css";
+import "./styles/style1.css";
 
 //import { useState } from "react";
 function Menu(){
