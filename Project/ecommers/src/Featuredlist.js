@@ -6,23 +6,59 @@ import c4 from "./images/chair4.png";
 import basket from "./images/Group.png";
 import like from "./images/Vectorl.png";
 import search from "./images/Vector.png";
+import bar from "./images/Group 141.png";
 export default function Featuredlist() {
   return (
     <>
       <div className="featuredlist">
-        <h2>Featured Products</h2>
-        <div className="featuredlist_row">
-          <div className="featuredlist_row_col1">
-            <div className="featuredlist_row_col1_img">
-                <img src={c1}/>
+        <div className="featurelist_outer">
+          <h1>Featured Products</h1>
+          <div className="featuredlist_outer_inner">
+            <div className="featuredlist_outer_inner_col1">
+              <div className="featuredlist_outer_inner_col1_img">
+                <img src={c1} />
+              </div>
+              <h4>Cantilever chair</h4>
+              <div>
+                <img src={bar}/>
+              </div>
+              <label>Code - Y523201</label>
+              <label>$42.00</label>
             </div>
-            <h4>Cantilever chair</h4>
-            <label>Code - Y523201</label>
-            <label>$42.00</label>
+            <div className="featuredlist_outer_inner_col1">
+            <div className="featuredlist_outer_inner_col1_img">
+                <img src={c2} />
+              </div>
+              <h4>Cantilever chair</h4>
+              <div>
+                <img src={bar}/>
+              </div>
+              <label>Code - Y523201</label>
+              <label>$42.00</label>
+            </div>
+            <div className="featuredlist_outer_inner_col1">
+            <div className="featuredlist_outer_inner_col1_img">
+                <img src={c3} />
+              </div>
+              <h4>Cantilever chair</h4>
+              <div>
+                <img src={bar}/>
+              </div>
+              <label>Code - Y523201</label>
+              <label>$42.00</label>
+            </div>
+            <div className="featuredlist_outer_inner_col1">
+            <div className="featuredlist_outer_inner_col1_img">
+                <img src={c4} />
+              </div>
+              <h4>Cantilever chair</h4>
+              <div>
+                <img src={bar}/>
+              </div>
+              <label>Code - Y523201</label>
+              <label>$42.00</label>
+            </div>
           </div>
-          <div className="featuredlist_row_col1"></div>
-          <div className="featuredlist_row_col1"></div>
-          <div className="featuredlist_row_col1"></div>
         </div>
       </div>
     </>
