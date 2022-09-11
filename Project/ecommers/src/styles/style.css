@@ -48,11 +48,13 @@ body {
 
 .footer_row1_col1_input {
   padding-bottom: 10px;
+  display: flex;
 }
 
 .footer_row1_col1_input input {
-  width: 190px;
-  height: 35px;
+  width: 170px;
+  /* height: 35px; */
+  padding: 10.5px;
   border-radius: 3px;
   border: none;
   font-size: 00.8rem;
@@ -63,7 +65,7 @@ body {
   background-color: #fb2e86;
   border: none;
   color: white;
-  height: 35px;
+  padding: 10px;
   width: 100px;
   border-radius: 3px;
   /* display: flex; */
@@ -151,21 +153,16 @@ body {
   width: 25%;
   background-color:white;
   margin: 10px;
-  padding-bottom: 10px;
-  /* border-style: outset; */
-  /* border: none; */
-  height: 361px;
-  /* outline: 5px solid rgba(0,0,0, .2); */
-  /* border-style: solid; */
-  border-width: 1px;
-  box-shadow: 0px 0px 15px rgb(224, 234, 240);
+  padding-bottom: 20px;
+  /* height: 361px; */
+  border-width: 2px;
+  /* box-shadow: 0px 0px 15px rgb(224, 234, 240); */
+  /* box-shadow: 0px 4px 4px rgba(0,0,0,0.25); */
+  box-shadow: 0px 4px 15px rgba(0,0 ,0, .25);
 }
 
 .featuredlist_outer_inner_col1:hover{
-   /* box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); */
    background-color: blue;
-   /* color: white; */
-  
 }
 
 .featuredlist_outer_inner_col1 h4{
@@ -196,10 +193,10 @@ body {
 
 .featuredlist_outer_inner_col1_divimg{
   background-color: #F6F7FB;
-  height: 236px;
+  padding-bottom: 10px;
+  /* height: 236px; */
 }
 
-/* .featuredlist_outer_inner_col1:hover  */
 .featuredlist_outer_inner_col1_topimg{
   justify-content: left;
   display: flex;
@@ -219,23 +216,25 @@ body {
 }
 
 .featuredlist_outer_inner_col1_topimg img{
-  padding-right: 10px;
+  padding-right: 15px;
 }
 
 .featuredlist_outer_inner_col1_img{
     /* background-color: #F6F7FB; */
     width: 270px;
-    /* height: 155px; */
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: row;
-    height: 236px;
+    /* height: 236px; */
     margin-bottom: 10px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .featuredlist_outer_inner_col1:hover .featuredlist_outer_inner_col1_img{
-  height: 155px;
+  /* height: 155px; */
+  padding: 0%;
 }
 
 .featuredlist_outer_inner_col1_button{
@@ -250,7 +249,8 @@ display: block;
 .featuredlist_outer_inner_col1_button button{
   /* padding: 5px; */
   width: 94px;
-  height: 29px;
+  /* height: 29px; */
+  padding: 10px;
   border-radius: 2px;
   background-color: #08D15F;
   color: white;

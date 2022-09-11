@@ -30,7 +30,7 @@ export default function Featuredlist() {
                   </div>
                 </div>
                 <div className="featuredlist_outer_inner_col1_img">
-                  <img src={c1} />
+                  <img src={c1} height={155} />
                 </div>
                 <div className="featuredlist_outer_inner_col1_button">
                   <button>View Details</button>
@@ -58,7 +58,7 @@ export default function Featuredlist() {
                   </div>
                 </div>
                 <div className="featuredlist_outer_inner_col1_img">
-                  <img src={c2} />
+                  <img src={c2} height={155}/>
                 </div>
                 <div className="featuredlist_outer_inner_col1_button">
                   <button>View Details</button>
@@ -86,7 +86,7 @@ export default function Featuredlist() {
                   </div>
                 </div>
                 <div className="featuredlist_outer_inner_col1_img">
-                  <img src={c3} />
+                  <img src={c3} height={155}/>
                 </div>
                 <div className="featuredlist_outer_inner_col1_button">
                   <button>View Details</button>
@@ -114,7 +114,7 @@ export default function Featuredlist() {
                   </div>
                 </div>
                 <div className="featuredlist_outer_inner_col1_img">
-                  <img src={c4} />
+                  <img src={c4} height={155}/>
                 </div>
                 <div className="featuredlist_outer_inner_col1_button">
                   <button>View Details</button>
