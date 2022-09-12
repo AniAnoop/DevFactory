@@ -19,11 +19,13 @@ export default function Featuredlist() {
             <div className="featuredlist_outer_inner_col1">
               <div className="featuredlist_outer_inner_col1_divimg">
                 <div className="featuredlist_outer_inner_col1_topimg">
+                  <div className="circle">
                   <div className="featuredlist_outer_inner_col1_topimg_3">
                     <img src={cart} />
                   </div>
+                  </div>
                   <div className="featuredlist_outer_inner_col1_topimg_3">
-                    <img src={like} />
+                    <img src={like}/>
                   </div>
                   <div className="featuredlist_outer_inner_col1_topimg_3">
                     <img src={search} />
