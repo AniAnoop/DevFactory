@@ -1,6 +1,7 @@
 import React from "react";
-import grid from "./images/clarity_grid-view-solid.png";
-import list from "./images/fa-solid_list.png";
+import grid from "./Images/clarity_grid-view-solid.png";
+import list from "./Images/fa-solid_list.png";
+import "./Filterhorizontal.css";
 
 export default function Filterhorizontal() {
   return (
@@ -8,8 +9,12 @@ export default function Filterhorizontal() {
       <div className="filterhorizontal">
         <div className="filterhorizontal_col1">
           <div className="filterhorizontal_col1_row">
-            <label className="filterhorizontal_col1_row_label1">Ecommerce Acceories & Fashion item</label>
-            <label className="filterhorizontal_col1_row_label2">About 9,620 results (0.62 seconds)</label>
+            <label className="filterhorizontal_col1_row_label1">
+              Ecommerce Acceories & Fashion item
+            </label>
+            <label className="filterhorizontal_col1_row_label2">
+              About 9,620 results (0.62 seconds)
+            </label>
           </div>
         </div>
         <div className="filterhorizontal_col2">

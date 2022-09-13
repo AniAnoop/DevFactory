@@ -1,17 +1,19 @@
 import App from "./App";
 import Featuredlist from "./Featuredlist";
 import Filterhorizontal from "./Filterhorizontal";
-import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Listview from "./Listview";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const Navigation=()=>{
-    return(
-        <BrowserRouter>
-        <Routes>
-            <Route path={"/"} element={<Featuredlist/>}></Route>
-            <Route path={"/footer"} element={<App/>}></Route>
-            <Route path={"/fhorizontal"} element={<Filterhorizontal/>}></Route>
-        </Routes>
-        </BrowserRouter>
-    )
-}
+const Navigation = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path={"/"} element={<Featuredlist />}></Route>
+        <Route path={"/footer"} element={<App />}></Route>
+        <Route path={"/fhorizontal"} element={<Filterhorizontal />}></Route>
+        <Route path={"/listview"} element={<Listview/>}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 export default Navigation;
