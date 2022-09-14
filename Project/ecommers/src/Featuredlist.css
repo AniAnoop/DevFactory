@@ -73,7 +73,6 @@
   padding-left: 10px;
   display: none;
   height: 31px;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -84,18 +83,17 @@
 
 .singlefeatredlist:hover .singlefeatredlist_inner_topimg_1 {
   display: block;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   /* justify-content: center; */
 }
 
 .singlefeatredlist:hover .singlefeatredlist_inner_topimg_2 {
   display: block;
-  padding-left: 10px;
 }
 
 .singlefeatredlist:hover .singlefeatredlist_inner_topimg_3 {
   display: block;
-  padding-left:  10px;
+  /* padding-left:  10px; */
 }
 
 .singlefeatredlist_inner_img {
@@ -167,8 +165,8 @@
   border-radius: 50%;
   margin-right: 5px;
   display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  align-content: center;
+  align-items:center;
+  justify-content: right;
+  /* align-content: center; */
   /* display: none; */
 }
