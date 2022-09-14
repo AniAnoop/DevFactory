@@ -55,13 +55,11 @@ function Singlefeaturedlist({ image }) {
       <div className="singlefeatredlist">
         <div className="singlefeatredlist_inner">
           <div className="singlefeatredlist_inner_topimg">
-            {/* <div className="singlefeatredlist_inner_topimg_outer"> */}
-              <div className={stylecart}>
-                <div className="singlefeatredlist_inner_topimg_1">
-                  <img src={cart} onClick={changeStyleCart} />
-                </div>
+            <div className={stylecart}>
+              <div className="singlefeatredlist_inner_topimg_1">
+                <img src={cart} onClick={changeStyleCart} />
               </div>
-            {/* </div> */}
+            </div>
             <div className={stylelike}>
               <div className="singlefeatredlist_inner_topimg_2">
                 <img src={like} onClick={changeStyleLike} />
