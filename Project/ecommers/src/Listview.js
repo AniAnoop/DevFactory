@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import "./Listview.css";
-import ydot from "./Images/yellowdot.png";
-import rdot from "./Images/rosedot.png";
-import bdot from "./Images/bluedot.png";
-import dictum from "./Images/dictum.png";
-import sodales from "./Images/sodales.png";
-import nibh from "./Images/nibh.png";
-import mauris from "./Images/mauris.png";
-import morbi from "./Images/morbi.png";
-import ultricies from "./Images/ultricies.png";
-import scelerisque from "./Images/scelerisque.png";
-import ustar from "./Images/star_unfilled.png";
-import fstar from "./Images/star_filled.png";
-import cart from "./Images/cart.png";
-import clike from "./Images/clike.png";
-import czoom from "./Images/czoom.png";
+import ydot from "./Images/listview_yellowdot.png";
+import rdot from "./Images/listview_rosedot.png";
+import bdot from "./Images/listview_bluedot.png";
+import dictum from "./Images/listview_dictum.png";
+import sodales from "./Images/listview_sodales.png";
+import nibh from "./Images/listview_nibh.png";
+import mauris from "./Images/listview_mauris.png";
+import morbi from "./Images/listview_morbi.png";
+import ultricies from "./Images/listview_ultricies.png";
+import scelerisque from "./Images/listview_scelerisque.png";
+import ustar from "./Images/listview_star_unfilled.png";
+import fstar from "./Images/listview_star_filled.png";
+import cart from "./Images/listview_cart.png";
+import clike from "./Images/listview_like.png";
+import czoom from "./Images/listview_zoom.png";
 
 export default function Listview() {
   return (

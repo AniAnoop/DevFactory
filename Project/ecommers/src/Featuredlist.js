@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import c1 from "./Images/featured_chair1.png";
-import c2 from "./Images/featured_chair2.png";
-import c3 from "./Images/featured_chair3.png";
-import c4 from "./Images/featured_chair4.png";
-import cart from "./Images/cart.png";
-import like from "./Images/like.png";
-import zoom from "./Images/zoom.png";
-import bar from "./Images/color_bars.png";
-import bar1 from "./Images/rose_bar.png";
-import bar2 from "./Images/light_rose_bar.png";
-import hbar from "./Images/3bars.png";
+import c1 from "./Images/featuredlist_chair1.png";
+import c2 from "./Images/featuredlist_chair2.png";
+import c3 from "./Images/featuredlist_chair3.png";
+import c4 from "./Images/featuredlist_chair4.png";
+import cart from "./Images/featuredlist_cart.png";
+import like from "./Images/featuredlist_like.png";
+import zoom from "./Images/featuredlist_zoom.png";
+import bar from "./Images/featuredlist_color_bars.png";
+import bar1 from "./Images/featuredlist_rose_bar.png";
+import bar2 from "./Images/featuredlist_light_rose_bar.png";
+import hbar from "./Images/featuredlist_3bars.png";
 import "./Featuredlist.css";
 
 export default function Featuredlist() {
@@ -55,11 +55,13 @@ function Singlefeaturedlist({ image }) {
       <div className="singlefeatredlist">
         <div className="singlefeatredlist_inner">
           <div className="singlefeatredlist_inner_topimg">
-            <div className={stylecart}>
-              <div className="singlefeatredlist_inner_topimg_1">
-                <img src={cart} onClick={changeStyleCart} />
+            {/* <div className="singlefeatredlist_inner_topimg_outer"> */}
+              <div className={stylecart}>
+                <div className="singlefeatredlist_inner_topimg_1">
+                  <img src={cart} onClick={changeStyleCart} />
+                </div>
               </div>
-            </div>
+            {/* </div> */}
             <div className={stylelike}>
               <div className="singlefeatredlist_inner_topimg_2">
                 <img src={like} onClick={changeStyleLike} />

@@ -1,6 +1,6 @@
 import React from "react";
-import grid from "./Images/clarity_grid-view-solid.png";
-import list from "./Images/fa-solid_list.png";
+import grid from "./Images/filterhorizontal_grid_view.png";
+import list from "./Images/filterhorizontal_list.png";
 import "./Filterhorizontal.css";
 
 export default function Filterhorizontal() {
