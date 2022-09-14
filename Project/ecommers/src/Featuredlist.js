@@ -24,6 +24,20 @@ export default function Featuredlist() {
             <Singlefeaturedlist image={c3} />
             <Singlefeaturedlist image={c4} />
           </div>
+          <div className="featurelist_outer_img">
+            <div className="featurelist_outer_img_1">
+              <img src={bar1} />
+            </div>
+            <div className="featurelist_outer_img_2">
+              <img src={bar2} />
+            </div>
+            <div className="featurelist_outer_img_3">
+              <img src={bar2} />
+            </div>
+            <div className="featurelist_outer_img_4">
+              <img src={bar2} />
+            </div>
+          </div>
         </div>
       </div>
     </>

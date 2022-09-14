@@ -170,3 +170,7 @@
   /* align-content: center; */
   /* display: none; */
 }
+
+.featurelist_outer_img {
+  display: flex;
+}
