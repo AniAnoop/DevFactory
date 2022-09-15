@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import "./Productthumb.css";
 import bag1 from "./Images/productthumb_bag1.png";
 import bag2 from "./Images/productthumb_bag2.png";
@@ -11,6 +11,12 @@ import instagram from "./Images/productthumb_camscan.png";
 import twitter from "./Images/productthumb_twitter.png";
 
 export default function Productthumb() {
+  const [stylelikes, setStyleLikes] = useState(
+    "productthumb_row2_outer_col3_row3_like"
+  );
+  const changeStyleLike = () => {
+    setStyleLikes("productthumbcircle");
+  };
   return (
     <>
       <div className="productthumb">
@@ -29,14 +35,14 @@ export default function Productthumb() {
                 <img src={bag1} width={104.5} />
               </div>
               <div>
-                <img src={bag2} width={104.5}/>
+                <img src={bag2} width={104.5} />
               </div>
               <div>
-                <img src={bag3} width={104.5}/>
+                <img src={bag3} width={104.5} />
               </div>
             </div>
             <div className="productthumb_row2_outer_col2">
-              <img src={bag4} width={260}/>
+              <img src={bag4} width={260} />
             </div>
             <div className="productthumb_row2_outer_col3">
               <h2>Playwood arm chair</h2>
@@ -71,8 +77,10 @@ export default function Productthumb() {
               </label>
               <div className="productthumb_row2_outer_col3_row3">
                 <label>Add To Cart</label>
-                <div>
-                  <img src={like} />
+                <div className={stylelikes}>
+                  <div className="productthumb_row2_outer_col3_row3_like">
+                    <img src={like} onClick={changeStyleLike} />
+                  </div>
                 </div>
               </div>
               <label className="productthumb_row2_outer_col3_label3">
