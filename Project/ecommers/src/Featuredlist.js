@@ -68,20 +68,28 @@ function Singlefeaturedlist({ image }) {
     <>
       <div className="singlefeatredlist">
         <div className="singlefeatredlist_inner">
-          <div className="singlefeatredlist_inner_topimg">
-            <div className={stylecart}>
-              <div className="singlefeatredlist_inner_topimg_1">
-                <img src={cart} onClick={changeStyleCart} />
+          <div className="singlefeatredlist_inner_outer">
+            <div className="singlefeatredlist_inner_topimg">
+              <div className="singlefeatredlist_inner_topimg_top">
+                <div className={stylecart}>
+                  <div className="singlefeatredlist_inner_topimg_1">
+                    <img src={cart} onClick={changeStyleCart} />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className={stylelike}>
-              <div className="singlefeatredlist_inner_topimg_2">
-                <img src={like} onClick={changeStyleLike} />
+              <div className="singlefeatredlist_inner_topimg_top">
+                <div className={stylelike}>
+                  <div className="singlefeatredlist_inner_topimg_2">
+                    <img src={like} onClick={changeStyleLike} />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className={stylezoom}>
-              <div className="singlefeatredlist_inner_topimg_3">
-                <img src={zoom} onClick={changeStyleZoom} />
+              <div className="singlefeatredlist_inner_topimg_top">
+                <div className={stylezoom}>
+                  <div className="singlefeatredlist_inner_topimg_3">
+                    <img src={zoom} onClick={changeStyleZoom} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

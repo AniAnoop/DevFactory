@@ -4,6 +4,7 @@ import Filterhorizontal from "./Filterhorizontal";
 import Listview from "./Listview";
 import Signup from "./Signup";
 import Productthumb from "./Productthumb";
+import Adminlist from "./Adminlist";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Navigation = () => {
@@ -16,6 +17,7 @@ const Navigation = () => {
         <Route path={"/listview"} element={<Listview/>}></Route>
         <Route path={"/signup"} element={<Signup/>}></Route>
         <Route path={"/productthumb"} element={<Productthumb/>}></Route>
+        <Route path={"/adminlist"} element={<Adminlist/>}></Route>
       </Routes>
     </BrowserRouter>
   );
