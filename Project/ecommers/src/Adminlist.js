@@ -12,18 +12,20 @@ export default function Adminlist() {
   return (
     <>
       <div className="adminlist">
-        <div className="adminlist_heading">
-          <label>Image Product</label>
-          <label>Producer</label>
-          <label>Product</label>
-          <label>ID</label>
-          <label>Cat</label>
-          <label>Link</label>
-          <label>Cost</label>
-          <label>Extra</label>
-          <label>Price</label>
-          <label>Priority</label>
-          <label>Edit</label>
+        <div className="adminlist_header">
+          <div className="adminlist_heading">
+            <label className="adminlist_heading_img">Image Product</label>
+            <label className="adminlist_heading_producer">Producer</label>
+            <label className="adminlist_heading_product">Product</label>
+            <label className="adminlist_heading_id">ID</label>
+            <label className="adminlist_heading_cat">Cat</label>
+            <label className="adminlist_heading_link">Link</label>
+            <label className="adminlist_heading_cost">Cost</label>
+            <label className="adminlist_heading_extra">Extra</label>
+            <label className="adminlist_heading_price">Price</label>
+            <label className="adminlist_heading_priority">Priority</label>
+            <label className="adminlist_heading_edit">Edit</label>
+          </div>
         </div>
         <div className="adminlist_middle">
           <Singleadminlist
@@ -85,20 +87,19 @@ function Singleadminlist({ image, producer, product, id, link }) {
           <div className="singleadminlist_row_img">
             <input type="circledcheckbox"></input>
             <div>
-              <img src={image} width={30} height={30}/>
+              <img src={image} width={30} height={30} />
             </div>
           </div>
-
-          <label>{producer}</label>
-          <label>{product}</label>
-          <label>{id}</label>
-          <label>Tablets</label>
-          <label>{link}</label>
-          <span>$432</span>
-          <span>20%</span>
-          <span>$540</span>
-          <span>1</span>
-          <FaPen />
+          <label className="singleadminlist_row_producer">{producer}</label>
+          <label className="singleadminlist_row_product">{product}</label>
+          <label className="singleadminlist_row_id">{id}</label>
+          <label className="singleadminlist_row_cat">Tablets</label>
+          <label className="singleadminlist_row_link">{link}</label>
+          <span className="singleadminlist_row_cost">$432</span>
+          <span className="singleadminlist_row_extra">20%</span>
+          <span className="singleadminlist_row_price">$540</span>
+          <span className="singleadminlist_row_priority">1</span>
+          <FaPen className="singleadminlist_row_edit"/>
         </div>
       </div>
     </>

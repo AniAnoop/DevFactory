@@ -1,16 +1,20 @@
 .adminlist{
-    background-color: green;
+    background-color:white;
     /* padding: 20px; */
     padding-top: 20px;
     padding-bottom: 20px;
 }
+.adminlist_header{
+    justify-content: center;
+    display: flex;
+}
 
 .adminlist_heading{
-    justify-content:space-around;
+    justify-content:space-between;
     display: flex;
     /* padding-top: 20px; */
     /* padding-bottom: 20px; */
-    width: 100%;
+    width: 92%;
     background-color: white;
 }
 
@@ -74,13 +78,106 @@
     margin-right: 10px;
     text-align: center;
     vertical-align: middle;
-    border: 1px solid #bdbdbd;
+    border: 1px solid silver;
     appearance: none;
     -webkit-appearance: none;
     outline: none;
     /* background-color: red; */
     cursor: pointer;
     /* display: flex; */
+}
+
+.singleadminlist_row_img{
+    width: 10%;
+}
+
+.singleadminlist_row_producer{
+    width: 10%;
+}
+
+.singleadminlist_row_product{
+    width: 13%;
+}
+
+.singleadminlist_row_id{
+    width: 10%;
+}
+
+.singleadminlist_row_cat{
+    width: 8%;
+}
+
+.singleadminlist_row_link{
+    width: 15%;
+}
+
+.singleadminlist_row_cost{
+    width: 8%;
+}
+
+.singleadminlist_row_extra{
+    width: 8%;
+}
+
+.singleadminlist_row_price{
+    width: 8%;
+}
+
+.singleadminlist_row_priority{
+    width: 5%;
+}
+
+.singleadminlist_row_edit{
+    width: 5%;
+}
+
+.adminlist_heading_img{
+    width: 10%
+}
+
+.adminlist_heading_producer{
+    width: 10%;
+    padding-left: 10px;
+}
+
+.adminlist_heading_product{
+    width: 13%;
+}
+
+.adminlist_heading_id{
+    width: 10%;
+}
+
+.adminlist_heading_cat{
+    width: 8%;
+}
+
+.adminlist_heading_link{
+    width: 15%;
+    /* padding-left: 10px; */
+}
+
+.adminlist_heading_cost{
+    width: 8%;
+    
+}
+
+.adminlist_heading_extra{
+    width: 7%;
+}
+
+.adminlist_heading_price{
+    width: 7%;
+    /* padding-left: 10px; */
+}
+
+.adminlist_heading_priority{
+    width: 7%;
+}
+
+.adminlist_heading_edit{
+    width:4%;
+    padding-left: 10px;
 }
 
 
