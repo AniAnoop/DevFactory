@@ -5,6 +5,7 @@ import Listview from "./Listview";
 import Signup from "./Signup";
 import Productthumb from "./Productthumb";
 import Adminlist from "./Adminlist";
+import Payment from "./Payment";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Navigation = () => {
@@ -18,6 +19,7 @@ const Navigation = () => {
         <Route path={"/signup"} element={<Signup/>}></Route>
         <Route path={"/productthumb"} element={<Productthumb/>}></Route>
         <Route path={"/adminlist"} element={<Adminlist/>}></Route>
+        <Route path={"payment"} element={<Payment/>}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -44,7 +44,7 @@
 .footer_row1_col1 label,
 .footer_row1_col2 label {
   font-size: 1rem;
-  color: #9da0ae;
+  color: #8A8FB9;
 }
 
 .footer_row1_col1_input {
@@ -60,7 +60,7 @@
   border: none;
   font-size: 00.8rem;
   outline: none;
-  color: #9da0ae;
+  color: #8A8FB9;
 }
 
 .footer_row1_col1_input button {
