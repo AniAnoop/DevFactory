@@ -138,6 +138,7 @@
   color: #acacb0;
   padding-left: 0%;
   font-size: .8rem;
+  font-weight: 400;
 }
 
 .payment_outer_inner_row2_row3_date {
@@ -172,12 +173,13 @@
   width: 90%;
   background-color: #f2f2f8;
   font-size: 0.8rem;
-  font-weight: 530;
+  /* font-weight: 530; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .payment_outer_inner_row2_row3_inner ::placeholder{
     color: #acacb0;
+    font-size: .75rem;
 }
 
 .payment_outer_inner_button {
