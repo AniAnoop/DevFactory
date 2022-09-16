@@ -99,7 +99,7 @@ function Singleadminlist({ image, producer, product, id, link }) {
           <span className="singleadminlist_row_extra">20%</span>
           <span className="singleadminlist_row_price">$540</span>
           <span className="singleadminlist_row_priority">1</span>
-          <FaPen className="singleadminlist_row_edit"/>
+          <FaPen className="singleadminlist_row_edit" style={{color:'gray'}}/>
         </div>
       </div>
     </>
