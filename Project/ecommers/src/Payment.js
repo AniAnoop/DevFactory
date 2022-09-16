@@ -10,7 +10,13 @@ export default function Payment() {
             <label>Payment method</label>
             <div className="payment_outer_inner_row1">
               <label>
-                Total <label className="payment_outer_inner_row1_labelin">: $199.00</label>
+                Total{" "}
+                <label className="payment_outer_inner_row1_label1">
+                  :{" "}
+                  <label className="payment_outer_inner_row1_label2">
+                    $199.00
+                  </label>
+                </label>
               </label>
             </div>
             <div className="payment_outer_inner_row2">
@@ -23,7 +29,10 @@ export default function Payment() {
                 <label>UPI</label>
               </div>
               <div className="payment_outer_inner_row2_row3">
-                <input type="circlecheckbox" className="payment_outer_inner_row2_row3_input" />
+                <input
+                  type="circlecheckbox"
+                  className="payment_outer_inner_row2_row3_input"
+                />
                 <label>Credit/Debit Card</label>
                 <div className="payment_outer_inner_row2_row3_inner">
                   <input placeholder="Name on card" />
