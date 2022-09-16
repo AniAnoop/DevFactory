@@ -85,7 +85,7 @@ function Singleadminlist({ image, producer, product, id, link }) {
       <div className="singleadminlist">
         <div className="singleadminlist_row">
           <div className="singleadminlist_row_img">
-            <input type="circledcheckbox"></input>
+            <input type="radio"></input>
             <div>
               <img src={image} width={30} height={30} />
             </div>
@@ -99,7 +99,7 @@ function Singleadminlist({ image, producer, product, id, link }) {
           <span className="singleadminlist_row_extra">20%</span>
           <span className="singleadminlist_row_price">$540</span>
           <span className="singleadminlist_row_priority">1</span>
-          <FaPen className="singleadminlist_row_edit" style={{color:'gray'}}/>
+          <FaPen className="singleadminlist_row_edit" style={{color:'#D2D7E3'}}/>
         </div>
       </div>
     </>

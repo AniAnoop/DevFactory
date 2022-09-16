@@ -3,6 +3,7 @@
     /* padding: 20px; */
     padding-top: 20px;
     padding-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .adminlist_header{
     justify-content: center;
@@ -16,6 +17,12 @@
     /* padding-bottom: 20px; */
     width: 92%;
     background-color: white;
+}
+
+.adminlist_heading label{
+    color: #74829F;
+    font-size: .7rem;
+    font-weight: 550;
 }
 
 .adminlist_middle{
@@ -33,6 +40,10 @@
     border-radius: 18px;
     border: none;
     outline: none;
+    color: #6C7A99;
+    font-weight: 550;
+    font-size: .7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .singleadminlist{
@@ -45,12 +56,12 @@
     display: flex;
     justify-content: space-between;
     /* padding-left: 10px; */
-    background-color: white;
+    background-color: #FAFBFC;
     width: 92%;
     align-items: center;
     padding: 20px;
     border-radius: 5px;
-    background-color: #F6F5FF;
+    /* background-color: #F6F5FF; */
     
 
 }
@@ -62,29 +73,15 @@
 
 .singleadminlist_row img{
     border-radius: 3px;
+    padding-left: 10px;
     /* display: flex; */
     /* border-bottom-right-radius: 3px; */
 }
 
 .singleadminlist_row label,span{
-    font-size: 1rem;
-}
-
-.singleadminlist_row input{
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
-    /* margin-top: 35px; */
-    margin-right: 10px;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid silver;
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-    /* background-color: red; */
-    cursor: pointer;
-    /* display: flex; */
+    font-size: .7rem;
+    color: #74829F;
+    font-weight: 550;
 }
 
 .singleadminlist_row_img{
