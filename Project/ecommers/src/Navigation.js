@@ -7,6 +7,7 @@ import Productthumb from "./Productthumb";
 import Adminlist from "./Adminlist";
 import Payment from "./Payment";
 import Adminbargraph from "./Adminbargraph";
+import Admincategoryeditpopup from "./Admincategoryeditpopup";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Navigation = () => {
@@ -20,8 +21,9 @@ const Navigation = () => {
         <Route path={"/signup"} element={<Signup/>}></Route>
         <Route path={"/productthumb"} element={<Productthumb/>}></Route>
         <Route path={"/adminlist"} element={<Adminlist/>}></Route>
-        <Route path={"payment"} element={<Payment/>}></Route>
-        <Route path={"adminbargraph"} element={<Adminbargraph/>}></Route>
+        <Route path={"/payment"} element={<Payment/>}></Route>
+        <Route path={"/adminbargraph"} element={<Adminbargraph/>}></Route>
+        <Route path={"/admincategoryeditpopup"} element={<Admincategoryeditpopup/>}></Route>
       </Routes>
     </BrowserRouter>
   );
