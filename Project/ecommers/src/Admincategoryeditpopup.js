@@ -40,7 +40,7 @@ export default function Admincategoryeditpopup() {
                 <div className="admincategoryeditpopup_inner_row2_inner_row1_col2">
                   <label>Products</label>
                   <input placeholder="26 products">
-                    {/* <AiFillEye />  */}
+                    {/* <AiFillEye style={{color:'#C3CAD9'}}/>  */}
                   </input>
                 </div>
               </div>
