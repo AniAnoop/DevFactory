@@ -1,0 +1,77 @@
+.adminrelated{
+    background-color: #FAFBFC;
+    width: 35%;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: .75rem;
+}
+
+.adminrelated_inner{
+    /* background-color: brown; */
+    padding: 10px;
+}
+
+.adminrelated_inner_row1{
+    justify-content: space-between;
+    display: flex;
+    /* background-color: silver; */
+    padding-top: 10px;
+    /* padding-bottom: 10px; */
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.adminrelated_inner_row1 label{
+    color: #8596B7;
+}
+
+.adminrelated_inner_row3{
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+.adminrelated_inner_row3 button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 2px solid #F2F3F5;
+    outline: none;
+    /* display: flex; */
+    background-color: #FAFBFC;
+    color: #6B7A99;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: .75rem;
+    /* justify-content: center; */
+}
+
+.singleadminrelated{
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.05);
+}
+
+.singleadminrelated_inner{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 20px 35px;
+}
+
+.singleadminrelated_inner label{
+    color: #6B7A99;
+}
+
+.singleadminrelated_inner_img{
+    width: 30%;
+}
+
+.singleadminrelated_inner_label1{
+    width: 60%;
+}
+
+.singleadminrelated_inner_label2{
+    width: 10%;
+}
