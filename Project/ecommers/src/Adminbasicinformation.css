@@ -1,0 +1,92 @@
+
+.Adminbasicinformation_outer{
+    background-color: #FAFBFC;
+    width: 23%;
+    padding: 20px;
+    padding-left: 35px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+
+.Adminbasicinformation_outer_row1{
+    justify-content: space-between;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    font-size: .75rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    /* padding-left: 10px; */
+}
+
+.Adminbasicinformation_outer_row1{
+    color: #6B7A99;
+}
+
+.Adminbasicinformation_outer_row2_row1{
+    border-bottom: 3px solid #F2F3F5;
+    padding: 15px 10px;
+    font-size: .7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    /* background-color: aliceblue; */
+    display: flex;
+}
+
+.Adminbasicinformation_outer_row2_row2{
+    padding: 15px 10px;
+    font-size: .7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    /* background-color: ; */
+    display: flex;
+}
+
+/* .Adminbasicinformation_outer_row2_row1_label2 */
+
+.Adminbasicinformation_outer_row2_row1_label1{
+    width: 50%;
+    color: #ADB8CC;
+}
+
+.Adminbasicinformation_outer_row2_row1_label2{
+    width: 50%;
+    color: #4D5E80;
+    display: flex;
+}
+
+.Adminbasicinformation_outer_row2_row3{
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    font-size: .7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.Adminbasicinformation_outer_row2_row3 label{
+    color: #6B7A99;
+}
+
+.Adminbasicinformation_outer_row2_row3 button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #8833FF;
+    font-size: .7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.Adminbasicinformation_outer_row2_row1_label2_circle{
+    height: .02px;
+    width: .02px;
+    border-radius: 50%;
+}
