@@ -32,7 +32,8 @@ function Barchart() {
     responsive: true,
     plugins: {
       legend: {
-        // position: "top",
+        position: "top",
+        show:true,
         display:false
       },
       tooltips:{
