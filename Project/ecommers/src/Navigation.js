@@ -10,6 +10,7 @@ import Adminbargraph from "./Adminbargraph";
 import Admincategoryeditpopup from "./Admincategoryeditpopup";
 import Adminrelated from "./Adminrelated";
 import Adminbasicinformation from "./Adminbasicinformation";
+// import Admincircledprogress from "./Admincircledprogress";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Navigation = () => {
@@ -28,6 +29,7 @@ const Navigation = () => {
         <Route path={"/admincategoryeditpopup"} element={<Admincategoryeditpopup/>}></Route>
         <Route path={"/adminrelated"} element={<Adminrelated/>}></Route>
         <Route path={"/adminbasicinformation"} element={<Adminbasicinformation/>}></Route>
+        {/* <Route path={"/admincircledprogress"} element={<Admincircledprogress/>}></Route> */}
       </Routes>
     </BrowserRouter>
   );
