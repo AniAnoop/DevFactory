@@ -1,6 +1,14 @@
 import React from "react";
 import "./Adminbargraph.css"
-import { Chart as ChartJS, Legend } from "chart.js";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import { Bar } from "react-chartjs-2";
 import datalabels from "chartjs-plugin-datalabels";
 import {BsThreeDots} from "react-icons/bs";
@@ -24,9 +32,15 @@ export default function Adminbargraph() {
 
 function Barchart() {
   ChartJS.register(
-    datalabels,
-    Legend
-    );
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+    datalabels
+  );
+  
 
   const options = {
     responsive: true,
