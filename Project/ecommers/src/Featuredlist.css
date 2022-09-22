@@ -168,7 +168,17 @@
   justify-content: right;
   /* align-items: center; */
 }
-
-.featurelist_outer_img {
+/*****************pagination****************/
+.featurelist_outer_pagination {
   display: flex;
+  padding-top: 10px;
+}
+
+.featurelist_outer_img_button{
+  height: 4px;
+    width: 20px;
+    background-color: #f8aacc;
+    border-radius: 20px;
+    margin: 0 5px;
+    cursor: pointer;
 }

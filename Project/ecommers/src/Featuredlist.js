@@ -12,39 +12,111 @@ import bar2 from "./Images/featuredlist_light_rose_bar.png";
 import hbar from "./Images/featuredlist_3bars.png";
 import "./Featuredlist.css";
 
-export default function Featuredlist() {
+const cards = {
+  chair1: {
+    image: c1,
+  },
+  chair2: {
+    image: c2,
+  },
+  chair3: {
+    image: c3,
+  },
+  chair4: {
+    image: c4,
+  },
+  chair5: {
+    image: c2,
+  },
+  chair6: {
+    image: c3,
+  },
+  chair7: {
+    image: c4,
+  },
+  chair8: {
+    image: c1,
+  },
+  chair9: {
+    image: c3,
+  },
+  chair10: {
+    image: c4,
+  },
+  chair11: {
+    image: c1,
+  },
+  chair12: {
+    image: c2,
+  },
+  chair13: {
+    image: c4,
+  },
+  chair14: {
+    image: c1,
+  },
+  chair15: {
+    image: c2,
+  },
+  chair16: {
+    image: c3,
+  },
+};
+
+export default function Slider() {
+  const [pageNumber, setPageNumber] = useState(0);
+  let itemPerpage = 4;
+  // let currentPage=0;
+  let totalPage = Object.keys(cards).length / itemPerpage;
+
+  const switchPage = (index) => {
+    setPageNumber(index);
+  };
+
+  let cardDisplay = Object.keys(cards)
+    .slice(pageNumber * itemPerpage, pageNumber * itemPerpage + itemPerpage)
+    .map((item) => {
+      return (
+        <div key={item}>
+          <Singlefeaturedlist img={cards[item]["image"]} />
+        </div>
+      );
+    });
+  let page = [];
+  for (let i = 0; i < totalPage; i++) {
+    page.push(i);
+  }
+  let pagination = page.map((item) => {
+    return (
+      <div
+        className="featurelist_outer_img_button"
+        style={pageNumber===item ? {backgroundColor:'#f61b7a',width:'30px'}:null}
+        onClick={() => switchPage(item)}
+      >
+      </div>
+    );
+  });
+
   return (
     <>
       <div className="featuredlist">
         <div className="featurelist_outer">
           <h1>Featured Products</h1>
           <div className="featuredlist_outer_inner">
-            <Singlefeaturedlist image={c1} />
-            <Singlefeaturedlist image={c2} />
-            <Singlefeaturedlist image={c3} />
-            <Singlefeaturedlist image={c4} />
+            {/* <Singlefeaturedlist image={c1} />
+              <Singlefeaturedlist image={c2} />
+              <Singlefeaturedlist image={c3} />
+              <Singlefeaturedlist image={c4} /> */}
+            {cardDisplay}
           </div>
-          <div className="featurelist_outer_img">
-            <div className="featurelist_outer_img_1">
-              <img src={bar1} />
-            </div>
-            <div className="featurelist_outer_img_2">
-              <img src={bar2} />
-            </div>
-            <div className="featurelist_outer_img_3">
-              <img src={bar2} />
-            </div>
-            <div className="featurelist_outer_img_4">
-              <img src={bar2} />
-            </div>
-          </div>
+          <div className="featurelist_outer_pagination">{pagination}</div>
         </div>
       </div>
     </>
   );
 }
 
-function Singlefeaturedlist({ image }) {
+function Singlefeaturedlist({ img }) {
   const [stylecart, setStyleCart] = useState(
     "singlefeatredlist_inner_topimg_1"
   );
@@ -94,7 +166,7 @@ function Singlefeaturedlist({ image }) {
             </div>
           </div>
           <div className="singlefeatredlist_inner_img">
-            <img src={image} height={155} />
+            <img src={img} height={155} />
           </div>
           <div className="singlefeatredlist_inner_button">
             <button>View Details</button>
