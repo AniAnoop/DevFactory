@@ -46,7 +46,7 @@ function Barchart() {
     responsive: true,
     plugins: {
       legend: {
-        position: "top",
+        position: 'top' ,
         show:true,
         display:false
       },
@@ -66,21 +66,23 @@ function Barchart() {
     },
     scales: {
       y: {
-        position: "left",
+        // position: "left",
 
-        ticks: {
+        // ticks: {
           display: false,
           // The y-axis value will start from zero
-          beginAtZero: true,
-          max: 10,
-        },
-        grid: {
-        color: "white",
-          display:false,
-          drawOnChartArea:false,
-          drawBorder:false
+          // beginAtZero: true,
+          min:1,
+          max: 12,
+          // stepSize:1,
+        // },
+        // grid: {
+        // color: "white",
+          // display:false,
+          // drawOnChartArea:false,
+          // drawBorder:false
           // borderWidth:0
-        },
+        // },
       },
 
       x: {
@@ -107,7 +109,7 @@ function Barchart() {
         label: "Capacity",
         data: [8, 7, 10],
         backgroundColor: ["#3361FF", "#29CC39", "#FF6633"],
-        barPercentage: 0.3,
+        barPercentage: 0.25,
         borderRadius:3
         // categoryPercentage: 0.5,
       },
@@ -115,7 +117,7 @@ function Barchart() {
   };
 
   return (
-    <div style={{ maxWidth: "350px" }}>
+    <div style={{ maxWidth: "350px"}}>
       <Bar options={options} data={data} />
     </div>
   );
