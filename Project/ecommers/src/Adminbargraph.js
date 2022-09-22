@@ -1,5 +1,5 @@
 import React from "react";
-import "./Adminbargraph.css"
+import "./Adminbargraph.css";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -11,8 +11,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import datalabels from "chartjs-plugin-datalabels";
-import {BsThreeDots} from "react-icons/bs";
-
+import { BsThreeDots } from "react-icons/bs";
 
 export default function Adminbargraph() {
   return (
@@ -20,10 +19,10 @@ export default function Adminbargraph() {
       <div className="adminbargraph">
         <div className="adminbargraph_row1">
           <label>Made Orders</label>
-          <BsThreeDots style={{color:'#C3CAD9'}}/>
+          <BsThreeDots style={{ color: "#C3CAD9" }} />
         </div>
         <div className="adminbargraph_row2">
-          <Barchart/>
+          <Barchart />
         </div>
       </div>
     </>
@@ -40,69 +39,53 @@ function Barchart() {
     Legend,
     datalabels
   );
-  
 
   const options = {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top' ,
-        show:true,
-        display:false
+        position: "top",
+        show: true,
+        display: false,
       },
-      tooltips:{
-        display:false
+      tooltips: {
+        display: false,
       },
       datalabels: {
         display: true,
         color: ["#3361FF", "#29CC39", "#FF6633"],
         align: "top",
         anchor: "end",
-        font: { 
-          size: "12" ,
-          weight:550
-      },
+        font: {
+          size: "12",
+          weight: 550,
+        },
       },
     },
     scales: {
       y: {
-        // position: "left",
+        display: false,
 
-        // ticks: {
-          display: false,
-          // The y-axis value will start from zero
-          // beginAtZero: true,
-          min:1,
-          max: 12,
-          // stepSize:1,
-        // },
-        // grid: {
-        // color: "white",
-          // display:false,
-          // drawOnChartArea:false,
-          // drawBorder:false
-          // borderWidth:0
-        // },
+        min: 1,
+        max: 12,
       },
 
       x: {
         grid: {
-          display:false,
-          drawOnChartArea:false,
-          drawBorder:false
+          display: false,
+          drawOnChartArea: false,
+          drawBorder: false,
           // borderWidth:0
         },
-        ticks:{
-          color:'#7D8FB3'
-        }
-        
+        ticks: {
+          color: "#7D8FB3",
+        },
       },
     },
   };
 
   const data = {
     labels: ["2027", "2028", "2029"],
-    // color:"#7D8FB3",
 
     datasets: [
       {
@@ -110,14 +93,13 @@ function Barchart() {
         data: [8, 7, 10],
         backgroundColor: ["#3361FF", "#29CC39", "#FF6633"],
         barPercentage: 0.25,
-        borderRadius:3
-        // categoryPercentage: 0.5,
+        borderRadius: 3,
       },
     ],
   };
 
   return (
-    <div style={{ maxWidth: "350px"}}>
+    <div style={{ maxWidth: "350px" }}>
       <Bar options={options} data={data} />
     </div>
   );
