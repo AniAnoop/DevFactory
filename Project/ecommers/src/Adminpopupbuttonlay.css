@@ -1,0 +1,33 @@
+.adminpopupbuttonlay{
+    display: flex;
+    background-color: #FAFBFC;
+    /* width: 50%; */
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+.adminpopupbuttonlay_row1{
+    display: flex;
+    align-items: center;
+}
+
+.adminpopupbuttonlay_row1 label{
+    padding-left: 20px;
+    color: #6B7A99;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.adminpopupbuttonlay_row2 button{
+    padding: 18px 30px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: white;
+    background-color: #8833FF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: .8rem;
+}

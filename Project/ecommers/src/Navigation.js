@@ -12,6 +12,8 @@ import Admincategoryeditpopup from "./Admincategoryeditpopup";
 import Adminrelated from "./Adminrelated";
 import Adminbasicinformation from "./Adminbasicinformation";
 import Admincircledprogress from "./Admincircledprogress";
+import Adminorderlist from "./Adminorderlist";
+import Adminpopupbuttonlay from "./Adminpopupbuttonlay";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Navigation = () => {
@@ -31,6 +33,8 @@ const Navigation = () => {
         <Route path={"/adminrelated"} element={<Adminrelated/>}></Route>
         <Route path={"/adminbasicinformation"} element={<Adminbasicinformation/>}></Route>
         <Route path={"/admincircledprogress"} element={<Admincircledprogress/>}></Route>
+        <Route path={"/adminorderlist"} element={< Adminorderlist/>}></Route>
+        <Route path={"/adminpopupbuttonlay"} element={<Adminpopupbuttonlay/>}></Route>
       </Routes>
     </BrowserRouter>
   );
