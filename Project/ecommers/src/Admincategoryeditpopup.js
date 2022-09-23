@@ -39,9 +39,11 @@ export default function Admincategoryeditpopup() {
                 </div>
                 <div className="admincategoryeditpopup_inner_row2_inner_row1_col2">
                   <label>Products</label>
-                  <input placeholder="26 products">
-                    {/* <AiFillEye style={{color:'#C3CAD9'}}/>  */}
-                  </input>
+                  <div className="admincategoryeditpopup_inner_row2_inner_row1_col2_input">
+                  <input placeholder="26 products"/>
+                    <AiFillEye style={{color:'#C3CAD9',paddingRight:'10px'}}/> 
+                  {/* </input> */}
+                  </div>
                 </div>
               </div>
               <div className="admincategoryeditpopup_inner_row2_inner_row3">

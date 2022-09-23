@@ -7,8 +7,6 @@ import cart from "./Images/featuredlist_cart.png";
 import like from "./Images/featuredlist_like.png";
 import zoom from "./Images/featuredlist_zoom.png";
 import bar from "./Images/featuredlist_color_bars.png";
-import bar1 from "./Images/featuredlist_rose_bar.png";
-import bar2 from "./Images/featuredlist_light_rose_bar.png";
 import hbar from "./Images/featuredlist_3bars.png";
 import "./Featuredlist.css";
 

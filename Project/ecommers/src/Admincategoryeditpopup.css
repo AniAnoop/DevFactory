@@ -88,6 +88,18 @@
   width: 250px;
 }
 
+.admincategoryeditpopup_inner_row2_inner_row1_col2_input input{
+  width: 225px;
+}
+
+.admincategoryeditpopup_inner_row2_inner_row1_col2_input{
+  background-color: white;
+  /* width: 225px; */
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+
 .admincategoryeditpopup_inner_row2_inner_row3 {
   display: flex;
   flex-direction: column;
