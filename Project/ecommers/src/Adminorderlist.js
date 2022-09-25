@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Adminorderlist.css";
-import {BsCheckCircleFill} from "react-icons/bs";
+import { BsCheckCircleFill } from "react-icons/bs";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function Adminorderlist() {
@@ -57,7 +57,7 @@ export default function Adminorderlist() {
           edate={"15 Jan 2019"}
           cstatus={"Failed"}
         />
-<Singleadminorderlist
+        <Singleadminorderlist
           id={"o1006"}
           price={"$1234"}
           cost={"$120"}
@@ -96,17 +96,18 @@ export default function Adminorderlist() {
           sdate={"15 Jan 2026"}
           edate={"15 Jan 2019"}
           cstatus={"Delivery"}
-        /><Singleadminorderlist
-        id={"o1010"}
-        price={"$1200"}
-        cost={"$50"}
-        product={"6 Products"}
-        cname={"Victoria Nelson"}
-        sdate={"15 Jan 2021"}
-        edate={"15 Jan 2019"}
-        cstatus={"Delivery"}
-      />
-      <Singleadminorderlist
+        />
+        <Singleadminorderlist
+          id={"o1010"}
+          price={"$1200"}
+          cost={"$50"}
+          product={"6 Products"}
+          cname={"Victoria Nelson"}
+          sdate={"15 Jan 2021"}
+          edate={"15 Jan 2019"}
+          cstatus={"Delivery"}
+        />
+        <Singleadminorderlist
           id={"o1011"}
           price={"$567"}
           cost={"$100"}
@@ -134,14 +135,20 @@ function Singleadminorderlist({
   edate,
   cstatus,
 }) {
+  // const [style,setStyle]=useState("singleadminorderlist");
+  // const handleChangeStyle=()=>{
+  //   setStyle("singleadminorderliststyle");
+  // }
   return (
     <>
       <div className="singleadminorderlist">
+        {/* <div className={style}> */}
         <div className="singleadminorderlist_row">
           <div className="singleadminorderlist_row_button">
             {/* <input type="radio"></input> */}
-            {/* <div className="singleadminorderlist_row_button_circle"></div> */}
-            <BsCheckCircleFill style={{color:'white'}}/>
+            <div className="singleadminorderlist_row_button_circle">
+              <BsCheckCircleFill style={{ fontSize: "15px", color: "white" }} />
+            </div>
           </div>
           <label className="singleadminorderlist_row_id">{id}</label>
           <label className="singleadminorderlist_row_price">{price}</label>
@@ -161,6 +168,7 @@ function Singleadminorderlist({
             style={{ color: "#C3CAD9", fontSize: "20px" }}
           />
         </div>
+        {/* </div> */}
       </div>
     </>
   );

@@ -108,12 +108,20 @@
 }
 
 .singleadminorderlist_row_button_circle{
-    height: 10px;
-  width: 10px;
+    height: 15px;
+  width: 15px;
   border-radius: 50%;
   border: 1px solid silver; 
   /* appearance: none; */
   outline: none;
   cursor: pointer;
+  justify-content: center;
+  display: flex;
 }
 
+.singleadminorderliststyle{
+    background-color: #8833FF;
+    display: flex;
+    width: 100%;
+    /* padding: 0; */
+}
