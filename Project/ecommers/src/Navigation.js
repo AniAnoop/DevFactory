@@ -15,6 +15,7 @@ import Admincircledprogress from "./Admincircledprogress";
 import Adminorderlist from "./Adminorderlist";
 import Adminpopupbuttonlay from "./Adminpopupbuttonlay";
 import Adminpopuptitle from "./Adminpopuptitle";
+import Adminproductmain from "./Adminproductmain";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Navigation = () => {
@@ -37,6 +38,7 @@ const Navigation = () => {
         <Route path={"/adminorderlist"} element={< Adminorderlist/>}></Route>
         <Route path={"/adminpopupbuttonlay"} element={<Adminpopupbuttonlay/>}></Route>
         <Route path={"/adminpopuptitle"} element={<Adminpopuptitle/>}></Route>
+        <Route path={"/adminproductmain"} element={<Adminproductmain/>}></Route>
       </Routes>
     </BrowserRouter>
   );
