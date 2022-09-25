@@ -140,8 +140,8 @@ function Singleadminorderlist({
         <div className="singleadminorderlist_row">
           <div className="singleadminorderlist_row_button">
             {/* <input type="radio"></input> */}
-            <div className="singleadminorderlist_row_button_circle"></div>
-            {/* <BsCheckCircleFill style={{color:'white'}}/> */}
+            {/* <div className="singleadminorderlist_row_button_circle"></div> */}
+            <BsCheckCircleFill style={{color:'white'}}/>
           </div>
           <label className="singleadminorderlist_row_id">{id}</label>
           <label className="singleadminorderlist_row_price">{price}</label>
