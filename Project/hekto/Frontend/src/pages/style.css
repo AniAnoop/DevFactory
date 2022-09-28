@@ -1,5 +1,7 @@
-/* .shoppage_gridpage{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-} */
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    
+}
+

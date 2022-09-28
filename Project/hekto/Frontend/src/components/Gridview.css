@@ -1,0 +1,47 @@
+.gv-r1-vel-ethit-eusmod {
+  padding-left: 22px;
+  color: blue;
+  font-size: 22px;
+}
+
+.gv-r1-chr-1-pic {
+  background-color: rgb(209, 204, 204);
+  width: 259px;
+  padding-bottom: 33px;
+  /* width: 113px 173%; */
+  /* padding-bottom: 22px; */
+}
+
+.gv-r1-blue-dlor {
+  color: blue;
+  padding-left: 55px;
+  padding-right: 11px;
+}
+
+.gv-r1-pink-dollr {
+  color: brown;
+  text-decoration: line-through;
+}
+
+.gv-r1-mooncolor {
+  padding-left: 105px;
+}
+
+.gv-outer-cover {
+  display: flex;
+  flex-direction: row;
+  /* background-color: blue; */
+  /* width: 22%; */
+  padding-left: 143px;
+}
+
+.gv-r1-cover {
+  padding-left: 11px;
+}
+
+.gv-row-2 {
+  /* background-color: blanchedalmond; */
+  display: flex;
+  flex-direction: row;
+  padding-left: 143px;
+}

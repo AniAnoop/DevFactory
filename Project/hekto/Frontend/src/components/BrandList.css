@@ -1,0 +1,15 @@
+.BrandList_image {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-top: 50px;
+    align-items: center;
+
+
+}
+
+.BrandList_image img {
+    width: fit-content;
+    height: fit-content;
+
+}
