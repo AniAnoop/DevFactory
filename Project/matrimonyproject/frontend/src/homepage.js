@@ -29,8 +29,8 @@ export default function App() {
     axios
       .post(url, req, header)
       .then((res) => {
-        console.log(res.req);
-        setArrayFunc(res.req);
+        console.log(res.data);
+        setArrayFunc(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -45,8 +45,8 @@ export default function App() {
     axios
       .post(url, req, header)
       .then((res) => {
-        console.log(res.req);
-        setArrayFunc(res.req);
+        console.log(res.data);
+        setArrayFunc(res.data);
         // alert(res.data.insertId);
       })
       .catch((err) => {

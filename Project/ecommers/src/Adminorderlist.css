@@ -1,58 +1,61 @@
-.adminorderlist{
-    background-color: #FFFFFF;
-    padding: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: .7rem;
-    font-weight: 500;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    color: #6B7A99;
-    width: 70%;
+.adminorderlist {
+  background-color: #ffffff;
+  /* padding: 10px; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: #6b7a99;
+  width: 70%;
+  
 }
 
-.adminorderlist_end{
-    justify-content: center;
-    display: flex;
-    padding: 10px;
+.adminorderlist_end {
+  justify-content: center;
+  display: flex;
+  padding: 10px;
 }
 
-.adminorderlist_end button{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: .7rem;
-    font-weight: 500;
-    border: 1px solid #F5F6F7;
-    background-color: white;
-    outline: none;
-    color: #6B7A99;
-    border-radius: 20px;
-    padding: 10px 20px;
+.adminorderlist_end button {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid #f5f6f7;
+  background-color: white;
+  outline: none;
+  color: #6b7a99;
+  border-radius: 20px;
+  padding: 10px 20px;
 }
 
-.singleadminorderlist{
-    background-color: #FAFBFC;
-    display: flex;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px;
+.singleadminorderlist {
+  background-color: #fafbfc;
+  display: flex;
+  padding: 15px 10px;
+  border-radius: 5px;
+  margin: 10px;
+  width: 100%;
+  align-items: center;
+  /* background-color: #65b05f; */
+  height: 4vh;
+  display:flex;
 }
 
-.singleadminorderlist_row{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    /* background-color: gold; */
-    /* justify-content: space-between; */
-    padding-top: 10px;
-    padding-bottom: 10px;
+.singleadminorderlist_row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: gold;
 }
 
-.singleadminorderlist_row_input{
-    display: flex;
-    align-items: center;
+.singleadminorderlist_row_input {
+  display: flex;
+  align-items: center;
 }
 
-.singleadminorderlist_row_input input{
-    height: 5px;
+.singleadminorderlist_row_input input {
+  height: 5px;
   width: 5px;
   border-radius: 50%;
   border: 1px solid silver;
@@ -63,55 +66,55 @@
   background-color: #65b05f;
 }
 
-.singleadminorderlist_row_input span{
-    padding-left: 10px;
+.singleadminorderlist_row_input_status {
+  padding-left: 10px;
 }
 
-.singleadminorderlist_row_button{
-    width: 5%;
+.singleadminorderlist_row_button {
+  width: 5%;
 }
 
-.singleadminorderlist_row_id{
-    width: 8%;
+.singleadminorderlist_row_id {
+  width: 8%;
 }
 
-.singleadminorderlist_row_price{
-    width:8% ;
+.singleadminorderlist_row_price {
+  width: 8%;
 }
 
-.singleadminorderlist_row_cost{
-    width: 8%;
+.singleadminorderlist_row_cost {
+  width: 8%;
 }
 
-.singleadminorderlist_row_product{
-    width: 14%;
+.singleadminorderlist_row_product {
+  width: 14%;
 }
 
-.singleadminorderlist_row_cname{
-    width: 14%;
+.singleadminorderlist_row_cname {
+  width: 14%;
 }
 
-.singleadminorderlist_row_sdate{
-    width: 13%;
+.singleadminorderlist_row_sdate {
+  width: 13%;
 }
 
-.singleadminorderlist_row_edate{
-    width: 13%;
+.singleadminorderlist_row_edate {
+  width: 13%;
 }
 
-.singleadminorderlist_row_input{
-    width: 12%;
+.singleadminorderlist_row_input {
+  width: 12%;
 }
 
-.singleadminorderlist_row_arrow{
-    width: 5%;
+.singleadminorderlist_row_arrow {
+  width: 5%;
 }
 
-.singleadminorderlist_row_button_circle{
-    height: 15px;
+.singleadminorderlist_row_button_circle {
+  height: 15px;
   width: 15px;
   border-radius: 50%;
-  border: 1px solid silver; 
+  border: 1px solid silver;
   /* appearance: none; */
   outline: none;
   cursor: pointer;
@@ -119,9 +122,18 @@
   display: flex;
 }
 
-.singleadminorderliststyle{
-    background-color: #8833FF;
-    display: flex;
-    width: 100%;
-    /* padding: 0; */
+.singleadminorderliststyle {
+  background-color: #8833ff;
+  color: white;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  height: 5vh;
+  align-items: center;
+  border-radius: 5px;
 }
+
+.singleadminorderlist_row_button_circle_red{
+    background-color: red;
+}
+

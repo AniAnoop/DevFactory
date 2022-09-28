@@ -1,0 +1,153 @@
+.Header_r1 {
+    background-color: #7E33E0;
+    padding: 10px 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+
+}
+
+
+.Header_r1_left {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+
+}
+
+.Header_r1_left_mailid {
+    padding-left: 100px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+
+}
+
+.Header_r1_left_mailid_mail {
+    padding-left: 10px;
+}
+
+.Header_r1_left_contact {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+}
+
+.Header_r1_left_contact_number: {
+    padding-left: 10px;
+
+}
+
+.Header_r1_left_contact_number label {
+    color: white;
+}
+
+.Header_r1_right {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.Header_r1_right_1 select {
+    background-color: #7E33E0;
+    border: none;
+    color: white;
+}
+
+.Header_r1_right_2 select {
+    background-color: #7E33E0;
+    border: none;
+    color: white;
+}
+
+.Header_r1_right_login button {
+    background-color: #7E33E0;
+    border: none;
+    color: white;
+}
+
+.Header_r1_right_3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.Header_r1_right_4 {
+    display: flex;
+    flex-direction: row;
+}
+
+.Header_r1_right_4_wishlist label {
+    color: white;
+    padding-right: 5px;
+}
+
+.Header_r2 {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 90px;
+    padding-right: 150px;
+}
+
+.Header_r2_col1 {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: center;
+
+}
+
+.Header_r2_col1 label {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-family: Josefin Sans;
+    font-size: 2rem;
+    text-shadow: 1px 1px;
+
+
+
+}
+
+.Header_r2_col2 {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.Header_r2_col2 select {
+    border: none;
+    color: rgb(214, 50, 78);
+}
+
+.Header_r2_col2 button {
+
+    border: none;
+    background-color: white;
+}
+
+.Header_r2_col3 {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: flex-end;
+
+
+}
+
+.Header_r2_col3 button {
+    background-color: #FB2E86;
+    border: none;
+}
+
+.Header_r2_col3 input {
+    border-width: 3px;
+    border-color: #E7E6EF;
+    border-style: solid;
+
+}

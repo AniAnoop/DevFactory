@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Adminorderlist.css";
-import { BsCheckCircleFill } from "react-icons/bs";
+import { TiTick } from "react-icons/ti";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function Adminorderlist() {
@@ -135,41 +135,51 @@ function Singleadminorderlist({
   edate,
   cstatus,
 }) {
-  // const [style,setStyle]=useState("singleadminorderlist");
-  // const handleChangeStyle=()=>{
-  //   setStyle("singleadminorderliststyle");
-  // }
+  const [style, setStyle] = useState("singleadminorderlist");
+  const [circlered, setCircleRed] = useState("");
+  const handleChangeStyle = () => {
+    setStyle("singleadminorderliststyle");
+    setCircleRed("singleadminorderlist_row_button_circle_red");
+  };
   return (
     <>
-      <div className="singleadminorderlist">
-        {/* <div className={style}> */}
-        <div className="singleadminorderlist_row">
+      <div className={"singleadminorderlist"}>
+        {/* <div className="singleadminorderlist_row"> */}
+        <div className={style} >
           <div className="singleadminorderlist_row_button">
-            {/* <input type="radio"></input> */}
-            <div className="singleadminorderlist_row_button_circle">
-              <BsCheckCircleFill style={{ fontSize: "15px", color: "white" }} />
-            </div>
+            {/* <div className="singleadminorderlist_row_button_circle"> */}
+            <TiTick
+              className={circlered}
+              style={{
+                fontSize: "15px",
+                color: "white",
+                borderRadius: "50%",
+                border: "1px solid silver",
+              }}
+              onClick={handleChangeStyle}
+            />
+            {/* </div> */}
           </div>
           <label className="singleadminorderlist_row_id">{id}</label>
           <label className="singleadminorderlist_row_price">{price}</label>
           <label className="singleadminorderlist_row_cost">{cost}</label>
           <label className="singleadminorderlist_row_product">{product}</label>
           <label className="singleadminorderlist_row_cname">{cname}</label>
-          <span className="singleadminorderlist_row_sdate">{sdate}</span>
-          <span className="singleadminorderlist_row_edate">{edate}</span>
+          <label className="singleadminorderlist_row_sdate">{sdate}</label>
+          <label className="singleadminorderlist_row_edate">{edate}</label>
           <div className="singleadminorderlist_row_input">
             <input />
-            <span className="singleadminorderlist_row_input_status">
+            <label className="singleadminorderlist_row_input_status">
               {cstatus}
-            </span>
+            </label>
           </div>
           <AiOutlineArrowRight
             className="singleadminorderlist_row_arrow"
             style={{ color: "#C3CAD9", fontSize: "20px" }}
           />
         </div>
-        {/* </div> */}
       </div>
+      {/* </div> */}
     </>
   );
 }
