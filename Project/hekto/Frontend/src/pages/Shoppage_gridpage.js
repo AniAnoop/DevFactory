@@ -7,17 +7,21 @@ import BrandList from "../components/BrandList";
 import Footer from "../components/Footer";
 import "./style.css";
 
-export default function Shoppage_gridpage(){
-    return(
-        <>
-        <div className="shoppage_gridpage">
-            <Header className="shoppage_gridpage_header"/>
-            {/* <Subbanner/> */}
-            <Filterhorizontal/>
-            <Gridview className="shoppage_gridpage_gridview"/>
-            <BrandList/>
-            <Footer/>
+export default function Shoppage_gridpage() {
+  return (
+    <>
+      <div className="shoppage_gridpage">
+        <Header />
+        <div className="shoppage_gridpage_subbanner">
+          <Subbanner />
         </div>
-        </>
-    )
+        <Filterhorizontal />
+        <div className="shoppage_gridpage_gridview">
+          <Gridview />
+        </div>
+        <BrandList />
+        <Footer />
+      </div>
+    </>
+  );
 }

@@ -1,7 +1,13 @@
 .gv-r1-vel-ethit-eusmod {
   padding-left: 22px;
   color: blue;
-  font-size: 22px;
+  /* font-size: 22px; */
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  padding-top: 11px;
+  /* background-color: black; */
 }
 
 .gv-r1-chr-1-pic {
@@ -16,11 +22,17 @@
   color: blue;
   padding-left: 55px;
   padding-right: 11px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .gv-r1-pink-dollr {
   color: brown;
   text-decoration: line-through;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .gv-r1-mooncolor {
