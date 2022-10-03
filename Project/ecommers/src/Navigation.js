@@ -17,9 +17,7 @@ import Adminpopupbuttonlay from "./Adminpopupbuttonlay";
 import Adminpopuptitle from "./Adminpopuptitle";
 import Adminproductmain from "./Adminproductmain";
 import Exampleareagraph from "./Exampleareagraph";
-/*********************pages********************** */
-// import Shoppage_gridpage from "./pages/Shoppage_gridpage";
-
+import Areachart from "./Areachart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Navigation = () => {
@@ -44,8 +42,7 @@ const Navigation = () => {
         <Route path={"/adminpopuptitle"} element={<Adminpopuptitle/>}></Route>
         <Route path={"/adminproductmain"} element={<Adminproductmain/>}></Route>
         <Route path={"/example"} element={<Exampleareagraph/>}></Route>
-       { /************************pages*************************** */}
-        {/* <Route path={"/shoppage_gridpage"} element={<Shoppage_gridpage/>}></Route> */}
+       <Route path={'/areachart'} element={<Areachart/>}></Route>
       </Routes>
     </BrowserRouter>
   );

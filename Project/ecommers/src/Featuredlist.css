@@ -92,18 +92,14 @@
 
 .singlefeatredlist:hover .singlefeatredlist_inner_topimg_1 {
   display: block;
-  /* padding-right: 10px; */
-  /* justify-content: center; */
 }
 
 .singlefeatredlist:hover .singlefeatredlist_inner_topimg_2 {
   display: block;
-  /* padding-left: 10px; */
 }
 
 .singlefeatredlist:hover .singlefeatredlist_inner_topimg_3 {
   display: block;
-  /* padding-left:  10px; */
 }
 
 .singlefeatredlist_inner_img {
