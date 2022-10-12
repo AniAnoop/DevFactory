@@ -1,5 +1,6 @@
 const { json } = require("express");
 const express = require("express");
+// const nodemailer = require("nodemailer");
 const app = express();
 const port = 8000;
 var mysql = require("mysql");
@@ -56,7 +57,7 @@ app.post("/login", function (req, res) {
 app.post("/communityinsert", function (req, res) {
   // var sql="insert into tblassociation(txtAssociationname,txtAcronim,refAssotype,txtEmail,txtPhonenumber,txtpostalno,txtAssodetails,txtWebsiteurl,txtHqaddress,txtBranches,txtDescription) values('Tata','Tata','2','tata@gmail.com','12325','682058','FFF','www.tata.com','HQFFF','Hydrabad','FFF123')"
   var sql =
-    "insert into tblassociation(txtAssociationname,txtAcronim,refAssotype,txtEmail,txtPhonenumber,txtpostalno,txtAssodetails,txtWebsiteurl,txtHqaddress,txtBranches,txtDescription) values ('" +
+    "insert into tblassociation(txtAssociationname,txtAcronim,refAssotype,txtEmail,txtPhonenumber,txtpostalno,txtAssodetails,txtWebsiteurl,txtHqaddress,txtBranches,txtDescription,txtCreatedBy,txtCreatedOn,txtUpdatedBy,txtUpdatedOn) values ('" +
     req.body.assoname +
     "','" +
     req.body.acronim +
@@ -78,6 +79,14 @@ app.post("/communityinsert", function (req, res) {
     req.body.branch +
     "','" +
     req.body.description +
+    "','" +
+    req.body.createdby +
+    "','" +
+    req.body.createdon +
+    "','" +
+    req.body.updatedby +
+    "','" +
+    req.body.updatedon +
     "')";
   con.query(sql, function (err, result) {
     if (err) {
@@ -92,54 +101,66 @@ app.post("/communityinsert", function (req, res) {
   });
 });
 
-app.post("/fetchcommunity",function(req,res){
+app.post("/fetchcommunity", function (req, res) {
   // console.log("hi");
-  var sql="select a.id,a.txtAssociationname,a.txtAcronim,t.txtAssotype,a.txtEmail,a.txtPhonenumber,a.txtAssodetails,a.txtWebsiteurl,a.txtHqaddress,a.txtBranches,a.txtDescription from tblassociation a join tblassotype t on a.refAssotype=t.id";
-  con.query(sql,function(err,result){
-    if(err){
+  var sql =
+    "select a.id,a.txtAssociationname,a.txtAcronim,t.txtAssotype,a.txtEmail,a.txtPhonenumber,a.txtAssodetails,a.txtWebsiteurl,a.txtHqaddress,a.txtBranches,a.txtDescription,a.txtCreatedBy,a.txtCreatedOn,a.txtUpdatedBy,a.txtUpdatedOn from tblassociation a join tblassotype t on a.refAssotype=t.id";
+  con.query(sql, function (err, result) {
+    if (err) {
       console.log(err);
       res.send(err);
-    }else{
+    } else {
       console.log(result);
       res.send(result);
     }
-  })
+  });
 });
 
-app.post("/exitcommunity",function(req,res){
-  var sql="update tblassociationmap set txtDeleteflag='1' where id='"+req.body.id+"'";
-  con.query(sql,function(err,result){
-    if(err){
+app.post("/exitcommunity", function (req, res) {
+  var sql =
+    "update tblassociationmap set txtDeleteflag='1' where id='" +
+    req.body.id +
+    "'";
+  con.query(sql, function (err, result) {
+    if (err) {
       console.log(err);
       res.send(err);
-    }else{
+    } else {
       console.log(result);
       res.send(result);
     }
-  })
-})
+  });
+});
 
-app.post("/resendotp",function(req,res){
-  function betweenRandomnumber(min,max){
-    return Math.floor(
-      Math.random()*(max-min+1)+min
-    )
-  }
-  var otp=betweenRandomnumber(100000,999999);
-  console.log("6 digit==>"+ otp );
-  var sql="update tblusers set txtOtp='"+otp+"' where id='"+req.body.id+"'";
+/***************otp****************** */
+function betweenRandomnumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+var otp = betweenRandomnumber(100000, 999999);
 
-  con.query(sql,function(err,result){
-if(err){
+/*********************************** */
+
+app.post("/resendotp", function (req, res) {
+  // function betweenRandomnumber(min,max){
+  //   return Math.floor(
+  //     Math.random()*(max-min+1)+min
+  //   )
+  // }
+  // var otp=betweenRandomnumber(100000,999999);
+  console.log("6 digit==>" + otp);
+  var sql =
+    "update tblusers set txtOtp='" + otp + "' where id='" + req.body.id + "'";
+
+  con.query(sql, function (err, result) {
+    if (err) {
       console.log(err);
       res.send(err);
-    }else{
+    } else {
       console.log(result);
       res.send(result);
     }
-  })
-  
-})
+  });
+});
 
 app.listen(port, function () {
   console.log("server is running");
