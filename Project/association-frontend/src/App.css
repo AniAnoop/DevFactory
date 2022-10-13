@@ -1,0 +1,15 @@
+/* .app_inner{
+padding: 50px;
+}
+.app_inner button{
+  margin: 20px;
+  padding: 10px 20px;
+} */
+
+.google_signin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
