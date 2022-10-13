@@ -1,6 +1,6 @@
 const { json } = require("express");
 const express = require("express");
-// const nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer");
 const app = express();
 const port = 8000;
 var mysql = require("mysql");
@@ -57,7 +57,7 @@ app.post("/login", function (req, res) {
 app.post("/communityinsert", function (req, res) {
   // var sql="insert into tblassociation(txtAssociationname,txtAcronim,refAssotype,txtEmail,txtPhonenumber,txtpostalno,txtAssodetails,txtWebsiteurl,txtHqaddress,txtBranches,txtDescription) values('Tata','Tata','2','tata@gmail.com','12325','682058','FFF','www.tata.com','HQFFF','Hydrabad','FFF123')"
   var sql =
-    "insert into tblassociation(txtAssociationname,txtAcronim,refAssotype,txtEmail,txtPhonenumber,txtpostalno,txtAssodetails,txtWebsiteurl,txtHqaddress,txtBranches,txtDescription,txtCreatedBy,txtCreatedOn,txtUpdatedBy,txtUpdatedOn) values ('" +
+    "insert into tblassociation(txtAssociationname,txtAcronim,refAssotype,txtEmail,txtPhonenumber,txtpostalno,txtAssodetails,txtWebsiteurl,txtHqaddress,txtBranches,txtDescription,txtCreatedBy,txtCreatedOn,txtUpdatedBy,dtUpdatedOn) values ('" +
     req.body.assoname +
     "','" +
     req.body.acronim +
@@ -104,7 +104,7 @@ app.post("/communityinsert", function (req, res) {
 app.post("/fetchcommunity", function (req, res) {
   // console.log("hi");
   var sql =
-    "select a.id,a.txtAssociationname,a.txtAcronim,t.txtAssotype,a.txtEmail,a.txtPhonenumber,a.txtAssodetails,a.txtWebsiteurl,a.txtHqaddress,a.txtBranches,a.txtDescription,a.txtCreatedBy,a.txtCreatedOn,a.txtUpdatedBy,a.txtUpdatedOn from tblassociation a join tblassotype t on a.refAssotype=t.id";
+    "select a.id,a.txtAssociationname,a.txtAcronim,t.txtAssotype,a.txtEmail,a.txtPhonenumber,a.txtAssodetails,a.txtWebsiteurl,a.txtHqaddress,a.txtBranches,a.txtDescription,a.txtCreatedBy,a.txtCreatedOn,a.txtUpdatedBy,a.dtUpdatedOn from tblassociation a join tblassotype t on a.refAssotype=t.id";
   con.query(sql, function (err, result) {
     if (err) {
       console.log(err);
@@ -132,24 +132,41 @@ app.post("/exitcommunity", function (req, res) {
   });
 });
 
-/***************otp****************** */
-function betweenRandomnumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-var otp = betweenRandomnumber(100000, 999999);
-
-/*********************************** */
 
 app.post("/resendotp", function (req, res) {
-  // function betweenRandomnumber(min,max){
-  //   return Math.floor(
-  //     Math.random()*(max-min+1)+min
-  //   )
-  // }
-  // var otp=betweenRandomnumber(100000,999999);
+  function betweenRandomnumber(min,max){
+    return Math.floor(
+      Math.random()*(max-min+1)+min
+    )
+  }
+  var otp=betweenRandomnumber(100000,999999);
   console.log("6 digit==>" + otp);
   var sql =
     "update tblusers set txtOtp='" + otp + "' where id='" + req.body.id + "'";
+    var transporter = nodemailer.createTransport({
+      service: 'hotmail',
+      auth: {
+        user: 'abcommunity123@gmail.com',
+        pass: 'association123'
+      }
+    });
+    
+    var mailOptions = {
+      from: 'abcommunity123@gmail.com',
+      to: 'abcommunity123@gmail.com',
+      subject: 'Sending Email using Node.js',
+      text: JSON.stringify(otp)
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+        // res.send(error)
+      } else {
+        console.log('Email sent: ' + info.response);
+        // res.send('Email sent: ' + info.response)
+      }
+    });
 
   con.query(sql, function (err, result) {
     if (err) {
